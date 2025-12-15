@@ -3,8 +3,8 @@
  * Handles generating AI responses from backend API
  */
 
-// Hardcode URL to strictly valid localhost to avoid ANY configuration or environment issues
-const API_URL = 'http://localhost:5001/api/v1';
+// Use environment variable for production (Vercel) or fallback to localhost for development
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api/v1';
 
 /**
  * Generate AI response from backend API
