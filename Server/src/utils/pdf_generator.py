@@ -36,10 +36,9 @@ def create_pdf_from_markdown(markdown_content: str, title: str = "Report", image
         
         for img_buffer in images:
             if img_buffer:
-                # Add image with proper sizing - pie charts need square aspect ratio
-                # Default to 6x4 for bar/line charts, 6x6 for pie/doughnut
-                img = Image(img_buffer, width=6*inch, height=6*inch)
-                img._restrictSize(6*inch, 6*inch)  # Maintain aspect ratio within bounds
+                # Add image with proper sizing - 5x5 inches is large but balanced
+                img = Image(img_buffer, width=5*inch, height=5*inch)
+                img._restrictSize(5*inch, 5*inch)  # Maintain aspect ratio within bounds
                 story.append(img)
                 story.append(Spacer(1, 0.3 * inch))
     

@@ -15,9 +15,9 @@ def create_chart_image(chart_type: str, data: Dict[str, Any], title: str = "") -
         return None
 
     # Create Figure explicitly (Thread-Safe)
-    # Use much larger square figure for Pie/Doughnut to maximize visibility
+    # Use VERY large square figure for Pie/Doughnut to maximize visibility in PDF
     if chart_type in ['doughnut', 'pie']:
-        fig = Figure(figsize=(8, 8))
+        fig = Figure(figsize=(10, 10))
     else:
         fig = Figure(figsize=(6, 4))
         
@@ -61,8 +61,9 @@ def create_chart_image(chart_type: str, data: Dict[str, Any], title: str = "") -
         ax.axis('equal')
         wedges, texts, autotexts = ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, 
                 colors=['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'],
+                radius=1.5,  # Make pie chart 50% larger than default
                 pctdistance=0.85 if chart_type == 'doughnut' else 0.6,
-                textprops={'fontsize': 11})
+                textprops={'fontsize': 12})
         
         # Style text
         for text in texts:
