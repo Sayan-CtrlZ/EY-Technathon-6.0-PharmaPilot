@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "source": "Simulated EXIM Analytics",
+    "years_covered": ["2020", "2021", "2022", "2023", "2024"],
+    "regions_covered": ["India", "US", "EU", "Africa", "LATAM", "SEA", "Middle East"]
+  },
+
+  "api_exports": [
+    {
+      "molecule": "Paracetamol API",
+      "hs_code": "29242920",
+      "ports": ["Mumbai", "Mundra"],
+      "destination_countries": ["USA", "Brazil", "Germany", "UAE"],
+      "yearwise_volume_tonnes": {
+        "2020": 41000,
+        "2021": 44500,
+        "2022": 47200,
+        "2023": 49850,
+        "2024": 52100
+      },
+      "export_value_usd_mn": {
+        "2020": 620,
+        "2021": 688,
+        "2022": 742,
+        "2023": 781,
+        "2024": 820
+      },
+      "cagr_percent_2020_2024": 7.2,
+      "import_dependency_percent": 12,
+      "supply_risk_score_10": 3,
+      "opportunity_score_10": 8,
+      "notes": "High-volume API, strong CAGR, global stable demand."
+    },
+    {
+      "molecule": "Metformin API",
+      "hs_code": "29379990",
+      "ports": ["Vizag", "Mundra"],
+      "destination_countries": ["UK", "Mexico", "Indonesia", "South Africa"],
+      "yearwise_volume_tonnes": {
+        "2020": 25500,
+        "2021": 26800,
+        "2022": 28950,
+        "2023": 30100,
+        "2024": 31850
+      },
+      "export_value_usd_mn": {
+        "2020": 310,
+        "2021": 332,
+        "2022": 365,
+        "2023": 389,
+        "2024": 410
+      },
+      "cagr_percent_2020_2024": 8.7,
+      "import_dependency_percent": 10,
+      "supply_risk_score_10": 2,
+      "opportunity_score_10": 9,
+      "notes": "Strong demand in diabetes markets."
+    },
+    {
+      "molecule": "Ibuprofen API",
+      "hs_code": "29163990",
+      "ports": ["Mumbai", "Chennai"],
+      "destination_countries": ["Mexico", "Turkey", "Spain"],
+      "yearwise_volume_tonnes": {
+        "2020": 14200,
+        "2021": 15000,
+        "2022": 16350,
+        "2023": 17100,
+        "2024": 18250
+      },
+      "export_value_usd_mn": {
+        "2020": 198,
+        "2021": 207,
+        "2022": 234,
+        "2023": 247,
+        "2024": 265
+      },
+      "import_dependency_percent": 22,
+      "china_competition_score_10": 9,
+      "opportunity_score_10": 7
+    },
+    {
+      "molecule": "Azithromycin API",
+      "hs_code": "29415090",
+      "ports": ["Vizag"],
+      "destination_countries": ["Nigeria", "Kenya", "Vietnam"],
+      "yearwise_volume_tonnes": {
+        "2020": 9200,
+        "2021": 10400,
+        "2022": 11800,
+        "2023": 12600,
+        "2024": 13500
+      },
+      "china_competition_score_10": 7,
+      "opportunity_score_10": 8
+    },
+    {
+      "molecule": "Pantoprazole API",
+      "hs_code": "29332990",
+      "ports": ["Mundra"],
+      "yearwise_volume_tonnes": {
+        "2020": 7200,
+        "2021": 8150,
+        "2022": 8900,
+        "2023": 9300,
+        "2024": 9800
+      },
+      "import_dependency_percent": 39,
+      "supply_risk_score_10": 6,
+      "opportunity_score_10": 7
+    }
+  ],
+
+  "api_imports": [
+    {
+      "molecule": "Amoxicillin API",
+      "hs_code": "29411010",
+      "source_countries": ["China", "Spain"],
+      "yearwise_import_volume_tonnes": {
+        "2020": 11800,
+        "2021": 12150,
+        "2022": 13400,
+        "2023": 14000,
+        "2024": 14900
+      },
+      "import_value_usd_mn": {
+        "2020": 210,
+        "2021": 225,
+        "2022": 249,
+        "2023": 262,
+        "2024": 275
+      },
+      "china_dependence_percent": 68,
+      "risk_level": "High",
+      "supply_risk_score_10": 9,
+      "notes": "High import vulnerability. Critical antibiotic API."
+    },
+    {
+      "molecule": "Losartan API",
+      "hs_code": "29333990",
+      "source_countries": ["China"],
+      "yearwise_import_volume_tonnes": {
+        "2020": 7100,
+        "2021": 7400,
+        "2022": 8150,
+        "2023": 8500,
+        "2024": 8700
+      },
+      "china_dependence_percent": 92,
+      "risk_level": "Very High",
+      "supply_risk_score_10": 10,
+      "notes": "Hypertension API with extreme China reliance."
+    },
+    {
+      "molecule": "Doxycycline API",
+      "hs_code": "29413020",
+      "yearwise_import_volume_tonnes": {
+        "2020": 8400,
+        "2021": 8850,
+        "2022": 9100,
+        "2023": 9420,
+        "2024": 9800
+      },
+      "import_value_usd_mn": {
+        "2020": 118,
+        "2021": 127,
+        "2022": 133,
+        "2023": 139,
+        "2024": 148
+      },
+      "china_dependence_percent": 74,
+      "supply_risk_score_10": 8
+    }
+  ],
+
+  "formulation_exports": [
+    {
+      "formulation_name": "Paracetamol 650 mg Tablets",
+      "dosage_form": "Solid Oral",
+      "destination_regions": ["Africa", "SEA", "LATAM"],
+      "ports": ["Mumbai", "Chennai"],
+      "yearwise_export_packs_mn": {
+        "2020": 920,
+        "2021": 1045,
+        "2022": 1180,
+        "2023": 1320,
+        "2024": 1400
+      },
+      "export_value_usd_mn": {
+        "2020": 180,
+        "2021": 196,
+        "2022": 215,
+        "2023": 238,
+        "2024": 256
+      },
+      "cagr_percent_2020_2024": 9.3,
+      "opportunity_score_10": 8,
+      "top_countries": ["Nigeria", "Kenya", "Philippines"]
+    },
+    {
+      "formulation_name": "Metformin SR 500 mg Tablets",
+      "dosage_form": "Extended Release",
+      "destination_regions": ["EU", "Middle East"],
+      "ports": ["Mundra"],
+      "yearwise_export_packs_mn": {
+        "2020": 410,
+        "2021": 452,
+        "2022": 501,
+        "2023": 535,
+        "2024": 590
+      },
+      "top_countries": ["UK", "Saudi Arabia"],
+      "opportunity_score_10": 9
+    },
+    {
+      "formulation_name": "Omeprazole Capsules",
+      "destination_regions": ["Africa", "SEA"],
+      "yearwise_export_packs_mn": {
+        "2020": 210,
+        "2021": 235,
+        "2022": 260,
+        "2023": 287,
+        "2024": 300
+      },
+      "opportunity_score_10": 7
+    },
+    {
+      "formulation_name": "Azithromycin 500 mg Tablets",
+      "destination_regions": ["SSA", "LATAM"],
+      "yearwise_export_packs_mn": {
+        "2020": 180,
+        "2021": 210,
+        "2022": 260,
+        "2023": 290,
+        "2024": 310
+      },
+      "priority_export_market": ["Nigeria", "Peru"],
+      "opportunity_score_10": 8
+    }
+  ],
+
+  "country_demand_summary": {
+    "Nigeria": { "growth_score_10": 9, "top_needs": ["Anti-infectives", "Analgesics"], "price_sensitivity": "High" },
+    "Kenya": { "growth_score_10": 8, "top_needs": ["Antibiotics", "Diabetes"], "price_sensitivity": "High" },
+    "Philippines": { "growth_score_10": 7, "top_needs": ["Pain", "GI"], "price_sensitivity": "Medium" },
+    "UK": { "growth_score_10": 6, "top_needs": ["Diabetes", "CV"], "price_sensitivity": "Low" }
+  },
+
+  "import_risk_summary": {
+    "high_dependency_apis": [
+      {
+        "molecule": "Losartan API",
+        "china_dependence_percent": 92,
+        "risk_level": "Very High",
+        "comment": "Critical import vulnerability."
+      },
+      {
+        "molecule": "Amoxicillin API",
+        "china_dependence_percent": 68,
+        "risk_level": "High",
+        "comment": "Needs alternative suppliers."
+      }
+    ]
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "dataset_name": "USPTO Mock - Detailed Patent Database",
+    "version": "1.0",
+    "generated_date": "2025-12-07",
+    "notes": "Synthetic dataset for EY Techathon 6.0. Fields mimic common patent office outputs (US/EP/IN/CN) and legal metadata for FTO, lifecycle and innovation analysis."
+  },
+
+  "patent_families": [
+    {
+      "molecule": "Semaglutide",
+      "therapy_area": "Diabetes / Obesity",
+      "patent_family_id": "PF-GLP1-001",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US15/234,001",
+        "publication_number": "US2018/0123456 A1",
+        "patent_number": "US10,200,111",
+        "priority_date": "2010-08-12",
+        "filing_date": "2015-03-21",
+        "grant_date": "2019-05-07",
+        "claims_count": 42,
+        "ipc_codes": ["A61K38/00","A61K47/00"],
+        "main_claim": "GLP-1 analog composition and dosing regimen achieving once-weekly exposure",
+        "legal_status": "Granted",
+        "maintenance_events": [
+          {"year": 2022, "event": "Fee paid - US maintenance 2"},
+          {"year": 2025, "event": "Fee paid - US maintenance 3"}
+        ],
+        "citations_count": 84,
+        "forward_citations": 42,
+        "family_members": ["EP2987654","JP2016001234","CN107654321"]
+      },
+      "patent_types": ["Composition of Matter","Formulation","Device"],
+      "expiry_years": {"us": 2032, "eu": 2031, "jp": 2030, "in": 2033},
+      "patent_strength_score_10": 9,
+      "innovation_trend_score_10": 9,
+      "competitor_filings_count": 32,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "Low",
+      "remaining_exclusivity_years": 7,
+      "generic_entry_estimate_range": "Post-2032 to 2035 (formulation patents extend exclusivity)",
+      "recommended_actions": [
+        "Invest in device/auto-injector differentiation",
+        "File method-of-use extensions for obesity indications",
+        "Prepare biosimilar defence playbook focusing on device patents"
+      ],
+      "notes": "Strong composition coverage and device patents extend practical exclusivity beyond standard composition expiry."
+    },
+
+    {
+      "molecule": "Dapagliflozin",
+      "therapy_area": "Diabetes / Cardio-renal",
+      "patent_family_id": "PF-SGLT2-011",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US13/567,912",
+        "publication_number": "US2015/0332102 A1",
+        "patent_number": "US9,800,555",
+        "priority_date": "2008-05-17",
+        "filing_date": "2013-11-09",
+        "grant_date": "2017-09-12",
+        "claims_count": 35,
+        "ipc_codes": ["C07D311/00","A61K31/00"],
+        "main_claim": "SGLT2 inhibitor compositions and combination therapies with renal benefit",
+        "legal_status": "Granted",
+        "citations_count": 61,
+        "family_members": ["EP2709988","CN104321000","IN2016CH00021"]
+      },
+      "patent_types": ["Composition","Combination Therapy"],
+      "expiry_years": {"us": 2026, "eu": 2027, "in": 2028},
+      "patent_strength_score_10": 6,
+      "innovation_trend_score_10": 6,
+      "competitor_filings_count": 15,
+      "litigation_flag": true,
+      "litigation_summary": [
+        {"jurisdiction": "US", "year": 2024, "case": "GenericCo v. InnovCorp", "status": "Pending (invalidity challenge)"}
+      ],
+      "freedom_to_operate_risk": "High",
+      "remaining_exclusivity_years": 1,
+      "generic_entry_estimate_range": "2026–2028",
+      "recommended_actions": [
+        "Accelerate lifecycle patents (formulation, FDC patents)",
+        "Prepare for generic launches and commercial switch strategies",
+        "Evaluate settlements or pay-for-delay risk"
+      ],
+      "notes": "Primary composition patents near cliff; combination and indication patents provide limited extension."
+    },
+
+    {
+      "molecule": "Osimertinib",
+      "therapy_area": "Oncology (EGFR)",
+      "patent_family_id": "PF-EGFR-301",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US14/123,456",
+        "publication_number": "US2016/0567890 A1",
+        "patent_number": "US11,234,567",
+        "priority_date": "2012-02-15",
+        "filing_date": "2014-05-20",
+        "grant_date": "2019-11-19",
+        "claims_count": 52,
+        "ipc_codes": ["C07D401/00","A61P35/00"],
+        "main_claim": "EGFR T790M mutation-targeted irreversible kinase inhibitor",
+        "legal_status": "Granted",
+        "citations_count": 103,
+        "family_members": ["EP3098765","JP2015023456","CN106789012"]
+      },
+      "patent_types": ["Composition","Combination","Biomarker"],
+      "expiry_years": {"us": 2034, "eu": 2035, "cn": 2035},
+      "patent_strength_score_10": 8,
+      "innovation_trend_score_10": 8,
+      "competitor_filings_count": 24,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "Low",
+      "remaining_exclusivity_years": 9,
+      "generic_entry_estimate_range": "Post-2034 (biomarker patents may extend effective exclusivity)",
+      "recommended_actions": [
+        "Focus on biomarker-linked diagnostics to raise barriers",
+        "Explore indication expansions and combination therapy patents"
+      ],
+      "notes": "Strong targeted therapy IP; biomarker patents present an additional moat."
+    },
+
+    {
+      "molecule": "Pembrolizumab",
+      "therapy_area": "Oncology - Immunotherapy",
+      "patent_family_id": "PF-PDL1-201",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US12/987,654",
+        "publication_number": "US2013/0223344 A1",
+        "patent_number": "US9,400,321",
+        "priority_date": "2007-10-21",
+        "filing_date": "2012-02-04",
+        "grant_date": "2016-01-05",
+        "claims_count": 68,
+        "ipc_codes": ["A61K39/395","C07K16/28"],
+        "main_claim": "Anti-PD-1 monoclonal antibody composition and use in cancer therapy",
+        "legal_status": "Granted",
+        "citations_count": 210,
+        "family_members": ["EP2578932","JP2011034567","CN103456789"]
+      },
+      "patent_types": ["Biologic","Method of Use"],
+      "expiry_years": {"us": 2028, "eu": 2029},
+      "patent_strength_score_10": 9,
+      "innovation_trend_score_10": 9,
+      "competitor_filings_count": 47,
+      "litigation_flag": true,
+      "litigation_summary": [
+        {"jurisdiction": "US", "year": 2022, "case": "BiosimCo v. InnovPharma", "status": "Settled"}
+      ],
+      "freedom_to_operate_risk": "High (biosimilar pressure)",
+      "remaining_exclusivity_years": 3,
+      "generic_entry_estimate_range": "2028–2031 (biosimilar entry likely in key markets)",
+      "recommended_actions": [
+        "Strengthen method-of-use and combination patents",
+        "Invest in manufacturing capacity to delay biosimilar price erosion",
+        "Explore label expansion patents tied to biomarkers"
+      ],
+      "notes": "Large biologic with active biosimilar interest; manufacturing know-how is a key defensive asset."
+    },
+
+    {
+      "molecule": "Fluoxetine",
+      "therapy_area": "CNS - Depression",
+      "patent_family_id": "PF-SSRI-139",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US08/345,010",
+        "publication_number": "US1999/0043211 A1",
+        "patent_number": "US5,123,456",
+        "priority_date": "1995-04-10",
+        "filing_date": "1998-02-02",
+        "grant_date": "2000-09-12",
+        "claims_count": 18,
+        "ipc_codes": ["A61K31/00"],
+        "main_claim": "SSRI composition and dosing",
+        "legal_status": "Expired",
+        "citations_count": 24,
+        "family_members": ["EP0812345","JP19980321"]
+      },
+      "patent_types": ["Composition","Formulation"],
+      "expiry_years": {"us": "Expired", "eu": "Expired"},
+      "patent_strength_score_10": 3,
+      "innovation_trend_score_10": 3,
+      "competitor_filings_count": 5,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "None",
+      "remaining_exclusivity_years": 0,
+      "generic_entry_estimate_range": "N/A - generic available",
+      "recommended_actions": [
+        "Pursue MR or LAI formulation patents",
+        "File device/route-of-administration patents for improved adherence"
+      ],
+      "notes": "Core patents expired; best route is formulation/device innovation for lifecycle value."
+    },
+
+    {
+      "molecule": "Aripiprazole",
+      "therapy_area": "CNS - Schizophrenia",
+      "patent_family_id": "PF-ANTIPSY-081",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US11/222,333",
+        "publication_number": "US2010/0776655 A1",
+        "patent_number": "US8,765,432",
+        "priority_date": "2004-03-30",
+        "filing_date": "2009-08-12",
+        "grant_date": "2013-06-18",
+        "claims_count": 40,
+        "ipc_codes": ["A61K31/537"],
+        "main_claim": "Atypical antipsychotic composition and depot formulations",
+        "legal_status": "Granted",
+        "citations_count": 52,
+        "family_members": ["EP2387654","JP201001234"]
+      },
+      "patent_types": ["Composition","Depot","Device"],
+      "expiry_years": {"us": 2025, "eu": 2026},
+      "patent_strength_score_10": 6,
+      "innovation_trend_score_10": 6,
+      "competitor_filings_count": 12,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "Medium",
+      "remaining_exclusivity_years": 0,
+      "generic_entry_estimate_range": "2025–2027",
+      "recommended_actions": [
+        "Prioritize depot/delivery patents for lifecycle extension",
+        "Consider LAI manufacturing partnerships to protect brand share"
+      ],
+      "notes": "Core composition nearing expiry; depot patents provide short-term extension."
+    },
+
+    {
+      "molecule": "Adalimumab",
+      "therapy_area": "Autoimmune / Dermatology",
+      "patent_family_id": "PF-TNF-777",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US09/999,001",
+        "publication_number": "US2005/0098765 A1",
+        "patent_number": "US7,654,321",
+        "priority_date": "2002-12-04",
+        "filing_date": "2005-01-14",
+        "grant_date": "2010-03-09",
+        "claims_count": 72,
+        "ipc_codes": ["C07K16/28","A61K39/00"],
+        "main_claim": "Anti-TNF monoclonal antibody and delivery device",
+        "legal_status": "Expired",
+        "citations_count": 340,
+        "family_members": ["EP1412345","JP20060012","CN101234567"]
+      },
+      "patent_types": ["Biologic","Formulation","Device"],
+      "expiry_years": {"us": "Expired", "eu": "Expired"},
+      "biosimilar_count": 19,
+      "patent_strength_score_10": 5,
+      "innovation_trend_score_10": 8,
+      "competitor_filings_count": 54,
+      "litigation_flag": true,
+      "litigation_summary": [
+        {"jurisdiction": "EU", "year": 2018, "case": "BiosimCo v. BrandCo", "status": "Settled"}
+      ],
+      "freedom_to_operate_risk": "High (biosimilar market active)",
+      "remaining_exclusivity_years": 0,
+      "generic_entry_estimate_range": "N/A - biosimilars active",
+      "recommended_actions": [
+        "Differentiate via device and patient-support patents",
+        "Pursue thermostability and low-cost manufacturing patents"
+      ],
+      "notes": "Core patents expired; strategy should focus on delivery and manufacturing patents to recover margins."
+    },
+
+    {
+      "molecule": "Umeclidinium/Vilanterol",
+      "therapy_area": "Respiratory – COPD",
+      "patent_family_id": "PF-COPD-550",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US13/333,777",
+        "publication_number": "US2014/0056789 A1",
+        "patent_number": "US10,345,678",
+        "priority_date": "2011-07-14",
+        "filing_date": "2013-02-02",
+        "grant_date": "2018-04-10",
+        "claims_count": 28,
+        "ipc_codes": ["A61K31/00","A61M15/00"],
+        "main_claim": "Fixed-dose LAMA/LABA DPI formulation with breath-actuated device",
+        "legal_status": "Granted",
+        "citations_count": 39,
+        "family_members": ["EP2823456","CN105432100"]
+      },
+      "patent_types": ["Combination","Device"],
+      "expiry_years": {"us": 2030, "eu": 2029, "in": 2032},
+      "patent_strength_score_10": 7,
+      "innovation_trend_score_10": 7,
+      "competitor_filings_count": 9,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "Low",
+      "remaining_exclusivity_years": 5,
+      "generic_entry_estimate_range": "Post-2030",
+      "recommended_actions": [
+        "File pediatric device claims",
+        "Protect device manufacturing methods and breath-actuated mechanisms"
+      ],
+      "notes": "Device patents provide strong leverage in inhalation market."
+    },
+
+    {
+      "molecule": "Losartan",
+      "therapy_area": "Cardiovascular – Hypertension",
+      "patent_family_id": "PF-ARB-003",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US07/234,567",
+        "publication_number": "US1997/0012345 A1",
+        "patent_number": "US5,432,100",
+        "priority_date": "1993-04-12",
+        "filing_date": "1997-01-15",
+        "grant_date": "1999-08-04",
+        "claims_count": 12,
+        "ipc_codes": ["C07D401/00"],
+        "main_claim": "Angiotensin II receptor blocker composition",
+        "legal_status": "Expired",
+        "citations_count": 18,
+        "family_members": ["EP0743210"]
+      },
+      "patent_types": ["Composition"],
+      "expiry_years": {"us": "Expired", "eu": "Expired"},
+      "patent_strength_score_10": 2,
+      "innovation_trend_score_10": 2,
+      "competitor_filings_count": 3,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "None",
+      "remaining_exclusivity_years": 0,
+      "recommended_actions": [
+        "Focus on cost & supply-chain improvements rather than IP"
+      ],
+      "notes": "Fully generic - useful as baseline for EXIM/import risk modelling."
+    },
+
+    {
+      "molecule": "Amoxicillin",
+      "therapy_area": "Anti-infective",
+      "patent_family_id": "PF-ABX-551",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US06/123,999",
+        "publication_number": "US1996/0234567 A1",
+        "patent_number": "US5,777,888",
+        "priority_date": "1990-01-15",
+        "filing_date": "1996-04-16",
+        "grant_date": "1998-11-02",
+        "claims_count": 16,
+        "ipc_codes": ["A61K31/00"],
+        "main_claim": "Beta-lactam antibiotic formulation",
+        "legal_status": "Expired",
+        "citations_count": 30,
+        "family_members": ["EP0643211","CN10123045"]
+      },
+      "patent_types": ["Formulation"],
+      "expiry_years": {"us": "Expired", "eu": "Expired"},
+      "patent_strength_score_10": 3,
+      "innovation_trend_score_10": 3,
+      "competitor_filings_count": 6,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "None",
+      "remaining_exclusivity_years": 0,
+      "recommended_actions": [
+        "File stability and delivery (e.g., dry syrup) patents for emerging market differentiation"
+      ],
+      "notes": "Patent expired; manufacturing & formulation differentiation are primary levers."
+    },
+
+    {
+      "molecule": "Cabotegravir (LA)",
+      "therapy_area": "HIV - Long Acting",
+      "patent_family_id": "PF-HIV-LAI-120",
+      "representative_patent": {
+        "country": "US",
+        "application_number": "US15/888,212",
+        "publication_number": "US2018/0098765 A1",
+        "patent_number": "US10,876,543",
+        "priority_date": "2013-11-01",
+        "filing_date": "2016-07-14",
+        "grant_date": "2020-02-25",
+        "claims_count": 48,
+        "ipc_codes": ["A61K47/48","A61P31/00"],
+        "main_claim": "Long-acting integrase inhibitor injectable formulation",
+        "legal_status": "Granted",
+        "citations_count": 64,
+        "family_members": ["EP3123458","AU2017001234"]
+      },
+      "patent_types": ["Formulation","Delivery","Use"],
+      "expiry_years": {"us": 2030, "eu": 2031},
+      "patent_strength_score_10": 8,
+      "innovation_trend_score_10": 8,
+      "competitor_filings_count": 6,
+      "litigation_flag": false,
+      "freedom_to_operate_risk": "Low-to-Medium",
+      "remaining_exclusivity_years": 5,
+      "generic_entry_estimate_range": "Post-2030 (manufacturing complexity slows generics)",
+      "recommended_actions": [
+        "Protect manufacturing & sterile fill-finish processes",
+        "File patents on at-home administration devices"
+      ],
+      "notes": "LAI market growth and injection patents create high barrier to entry despite mid-term expiry."
+    }
+  ],
+
+  "innovation_trends_summary": {
+    "total_families": 12,
+    "average_patent_strength_score": 6.4,
+    "hot_ip_areas": ["Formulation & Delivery", "Biologics & Biosimilars", "Biomarker-linked claims"],
+    "yearly_filings_trend": {
+      "2018": 840,
+      "2019": 890,
+      "2020": 960,
+      "2021": 1040,
+      "2022": 1105,
+      "2023": 1180,
+      "2024": 1260
+    },
+    "recommended_programs_for_portfolio": [
+      "Formulation life-cycle patents for near-cliff molecules (e.g., dapagliflozin)",
+      "Device & delivery patents for inhalation and injectables",
+      "Biomarker & companion diagnostic claims for oncology to extend effective exclusivity"
+    ]
+  }
+}

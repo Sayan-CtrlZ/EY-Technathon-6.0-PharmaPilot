@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+@theme {
+  --colour-primary: #398c00
+}
+
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+/* Light mode scrollbar - green */
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 5px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Dark mode scrollbar - white */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 2px solid #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+}
+
+
+.reset-tw :not(pre) :not(code) {
+  all: revert;
+}
+
+.loader div:nth-child(2){
+  animation-delay: 0.2s;
+}
+.loader div:nth-child(3){
+  animation-delay: 0.4s;
+}
+
+/* Chrome/Edge scrollbar styling for chat messages */
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+.dark .messages-container::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+.dark .messages-container::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+}
+
+/* Textarea scrollbar */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+.dark textarea::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+.dark textarea::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+}
