@@ -1,0 +1,35 @@
+<svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pp-green-icon" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2ECC71"></stop>
+      <stop offset="50%" stop-color="#27AE60"></stop>
+      <stop offset="100%" stop-color="#16A085"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Square Background -->
+  <rect x="0" y="0" width="34" height="34" rx="8" fill="url(#pp-green-icon)"></rect>
+
+  <!-- Stylized "P" -->
+  <path d="M12 11
+       C12 8.7 13.7 7 16 7
+       H21.5
+       C24.8 7 27.5 9.7 27.5 13
+       C27.5 16.3 24.8 19 21.5 19
+       H16
+       V23.5
+       C16 26 17.2 27.8 18.8 29
+       L17.2 31.4
+       C14.4 29.8 12 27.2 12 23.8
+       Z
+
+       M16 11
+       V15.5
+       H21.5
+       C22.9 15.5 24 14.4 24 13
+       C24 11.6 22.9 10 21.5 10
+       Z" fill="#FFFFFF"></path>
+
+  <!-- Small navigation dot -->
+  <circle cx="25" cy="23" r="2.1" fill="#FFFFFF"></circle>
+</svg>

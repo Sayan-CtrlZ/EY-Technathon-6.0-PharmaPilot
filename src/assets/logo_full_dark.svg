@@ -1,0 +1,35 @@
+<svg width="193" height="46" viewBox="0 0 193 46" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pp-green-light" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#2ECC71"></stop>
+      <stop offset="50%" stop-color="#27AE60"></stop>
+      <stop offset="100%" stop-color="#16A085"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(0,4)">
+    <rect x="0" y="0" width="34" height="34" rx="9" fill="url(#pp-green-light)"></rect>
+    <path d="M12 11 C12 8.7 13.7 7 16 7 H22 C25.5 7 28.5 10 28.5 13.5
+             C28.5 17 25.5 20 22 20 H16 V24.5 C16 27 17 28.7 18.8 30
+             L17 32.8 C14.2 31.3 12 28.7 12 24.8 Z
+             M16 11 V16.2 H22 C23.7 16.2 25 14.9 25 13.2
+             C25 11.5 23.7 10 22 10 Z" fill="#FFFFFF"></path>
+    <circle cx="25.5" cy="24.5" r="2.2" fill="#FFFFFF"></circle>
+  </g>
+
+  <!-- TEXT -->
+  <g transform="translate(40,11)">
+    <text x="0" y="9" font-size="12.5" font-weight="700" font-family="system-ui" fill="#0A0F1A">
+      Pharma
+    </text>
+
+    <text x="49" y="9" font-size="12.5" font-weight="700" font-family="system-ui" fill="#2ECC71">
+      Pilot
+    </text>
+
+    <text x="0" y="22" font-size="7.5" font-weight="600" letter-spacing="0.12em" font-family="system-ui" fill="#27AE60">
+      AGENTIC RESEARCH NAVIGATOR
+    </text>
+  </g>
+</svg>

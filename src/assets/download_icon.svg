@@ -1,0 +1,30 @@
+<svg width="170" height="48" viewBox="0 0 170 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Button background -->
+  <rect width="170" height="48" rx="12" fill="url(#btnGradient)" />
+
+  <!-- Download icon circle -->
+  <circle cx="30" cy="24" r="16" fill="url(#iconGradient)" stroke="#2EBF60" stroke-width="1.5"/>
+
+  <!-- Download arrow -->
+  <path d="M30 16V28" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M24 23L30 29L36 23" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Text -->
+  <text x="60" y="30" fill="white" font-size="18" font-weight="600" font-family="Inter, sans-serif">
+    Download
+  </text>
+
+  <defs>
+    <!-- Button background gradient -->
+    <linearGradient id="btnGradient" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DDC84"/>
+      <stop offset="1" stop-color="#1FA84A"/>
+    </linearGradient>
+
+    <!-- Icon gradient -->
+    <linearGradient id="iconGradient" x1="30" y1="8" x2="30" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DDC84"/>
+      <stop offset="1" stop-color="#1FA84A"/>
+    </linearGradient>
+  </defs>
+</svg>
