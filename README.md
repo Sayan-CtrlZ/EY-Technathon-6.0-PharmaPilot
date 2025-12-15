@@ -1,6 +1,14 @@
-# PharmaPilot - AI-Powered Pharmaceutical Research Platform
+﻿# PharmaPilot
 
-A comprehensive pharmaceutical innovation discovery platform leveraging multi-agent AI systems for market intelligence, clinical research, and competitive analysis.
+> **AI-Powered Pharmaceutical Research Platform** - Transforming drug discovery with intelligent insights
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat&logo=react)](https://react.dev/)
+[![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=flat&logo=python)](https://www.python.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite)](https://www.sqlite.org/)
+
+---
+
 
 ## Table of Contents
 
