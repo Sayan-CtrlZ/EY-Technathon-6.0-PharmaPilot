@@ -110,7 +110,8 @@ PharmaPilot - AI-Powered Pharmaceutical Research Platform
             message.attach(MIMEText(text_content, "plain"))
             message.attach(MIMEText(html_content, "html"))
 
-            with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
+            # Use timeout to prevent hanging on slow/unreachable SMTP servers
+            with smtplib.SMTP(self.smtp_server, self.smtp_port, timeout=10) as server:
                 server.starttls()
                 server.login(self.sender_email, self.sender_password)
                 server.send_message(message)

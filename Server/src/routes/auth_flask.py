@@ -270,12 +270,17 @@ def forgot_password():
             # For now, just return success
             print(f"Password reset token for {email}: {reset_token}")  # Keep for debugging
             
-            # Send email
-            from src.utils.email_utils import send_reset_email
-            email_sent = send_reset_email(email, reset_token)
-            
-            if not email_sent:
-                print("Failed to send reset email (check SMTP config)")
+            # Try to send email, but don't let it block or timeout the request
+            try:
+                from src.utils.email_utils import send_reset_email
+                email_sent = send_reset_email(email, reset_token)
+                
+                if not email_sent:
+                    print("Failed to send reset email (check SMTP config)")
+            except Exception as email_error:
+                # Log the error but don't fail the request
+                print(f"Email sending error (non-blocking): {email_error}")
+                # Token is still stored in reset_tokens_db, so user can use it if they have it
 
         # Always return success to prevent email enumeration
         return jsonify({
