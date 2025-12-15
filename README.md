@@ -253,8 +253,8 @@ Copyright 2025 PharmaPilot Team. All rights reserved.
 
 ---
 
-**Developed for EY Techathon 6.0**
+**Developed By MindOrbit**
 
-**Team**: PharmaPilot
+**Team**: MindOrbit
 
 **Year**: 2025
