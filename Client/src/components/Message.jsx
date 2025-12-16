@@ -372,12 +372,12 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
     const labels = chart.labels
     const values = chart.values
 
-    // Single color palette (one color per chart type)
+    // Soft color palette (one color per chart type)
     const chartColors = [
-      { bg: 'rgba(59, 130, 246, 0.7)', border: 'rgba(37, 99, 235, 1)', hover: 'rgba(37, 99, 235, 1)' },      // blue
-      { bg: 'rgba(34, 197, 94, 0.7)', border: 'rgba(22, 163, 74, 1)', hover: 'rgba(22, 163, 74, 1)' },      // green
-      { bg: 'rgba(239, 68, 68, 0.7)', border: 'rgba(220, 38, 38, 1)', hover: 'rgba(220, 38, 38, 1)' },      // red
-      { bg: 'rgba(251, 191, 36, 0.7)', border: 'rgba(245, 158, 11, 1)', hover: 'rgba(245, 158, 11, 1)' }    // amber
+      { bg: 'rgba(96, 165, 250, 0.7)', border: 'rgba(59, 130, 246, 1)', hover: 'rgba(59, 130, 246, 1)' },      // soft blue
+      { bg: 'rgba(52, 211, 153, 0.7)', border: 'rgba(16, 185, 129, 1)', hover: 'rgba(16, 185, 129, 1)' },      // soft green
+      { bg: 'rgba(248, 113, 113, 0.7)', border: 'rgba(239, 68, 68, 1)', hover: 'rgba(239, 68, 68, 1)' },      // soft red
+      { bg: 'rgba(251, 146, 60, 0.7)', border: 'rgba(249, 115, 22, 1)', hover: 'rgba(249, 115, 22, 1)' }      // soft orange
     ]
 
     const colorIdx = index % chartColors.length
@@ -452,18 +452,18 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
     const labels = chart.labels
     const values = chart.values
 
-    // Multi-color palette for pie slices
+    // Softer, professional color palette for pie slices
     const pieColors = [
-      'rgba(59, 130, 246, 0.8)',    // blue
-      'rgba(239, 68, 68, 0.8)',     // red
-      'rgba(34, 197, 94, 0.8)',     // green
-      'rgba(251, 191, 36, 0.8)',    // amber
-      'rgba(168, 85, 247, 0.8)',    // purple
-      'rgba(236, 72, 153, 0.8)',    // pink
-      'rgba(14, 165, 233, 0.8)',    // sky
-      'rgba(249, 115, 22, 0.8)',    // orange
-      'rgba(6, 182, 212, 0.8)',     // cyan
-      'rgba(192, 132, 250, 0.8)'    // violet
+      'rgba(96, 165, 250, 0.85)',    // soft blue
+      'rgba(52, 211, 153, 0.85)',    // soft green
+      'rgba(251, 146, 60, 0.85)',    // soft orange
+      'rgba(248, 113, 113, 0.85)',   // soft red
+      'rgba(167, 139, 250, 0.85)',   // soft purple
+      'rgba(244, 114, 182, 0.85)',   // soft pink
+      'rgba(56, 189, 248, 0.85)',    // soft sky
+      'rgba(253, 186, 116, 0.85)',   // soft amber
+      'rgba(103, 232, 249, 0.85)',   // soft cyan
+      'rgba(196, 181, 253, 0.85)'    // soft violet
     ]
 
     const data = useMemo(() => ({
@@ -472,8 +472,9 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
         {
           data: values,
           backgroundColor: values.map((_, idx) => pieColors[idx % pieColors.length]),
-          borderColor: '#fff',
-          borderWidth: 2
+          borderColor: 'transparent',  // NO borders
+          borderWidth: 0,  // NO borders
+          spacing: 0  // NO gaps between slices
         }
       ]
     }), [labels, values])
@@ -483,20 +484,33 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          position: 'bottom',
-          labels: { color: '#6b7280', font: { size: 11 } }
+          position: 'right',  // Legend on the right side
+          align: 'start',
+          labels: {
+            color: '#374151',
+            font: { size: 11, weight: '500' },
+            padding: 15,
+            boxWidth: 15,
+            boxHeight: 15
+          }
         },
-        title: chart.title ? { display: true, text: chart.title } : undefined,
+        title: chart.title ? {
+          display: true,
+          text: chart.title,
+          font: { size: 13, weight: 'bold' },
+          color: '#111827',
+          padding: { bottom: 15 }
+        } : undefined,
         tooltip: {
           backgroundColor: '#0f172a',
           borderColor: '#22c55e',
           borderWidth: 1,
           callbacks: {
-            label: (ctx) => `${ctx.label}: ${ctx.parsed}`
+            label: (ctx) => `${ctx.label}: ${ctx.parsed} (${((ctx.parsed / values.reduce((a, b) => a + b, 0)) * 100).toFixed(1)}%)`
           }
         }
       }
-    }), [chart.title])
+    }), [chart.title, values])
 
     const [visible, setVisible] = useState(false)
 
@@ -506,12 +520,8 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
     }, [])
 
     return (
-      <div className='rounded border border-gray-200 dark:border-gray-700 p-3 bg-white dark:bg-gray-900 shadow-sm'>
-        <div className='flex items-center justify-between mb-2'>
-          <div className='text-sm font-semibold text-gray-800 dark:text-gray-100'>{chart.title || 'Chart'}</div>
-          {chart.subtitle && <div className='text-xs text-gray-500 dark:text-gray-400'>{chart.subtitle}</div>}
-        </div>
-        <div className='h-96' style={{ opacity: visible ? 1 : 0, transition: 'opacity 220ms ease' }}>
+      <div className='rounded border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-900 shadow-sm'>
+        <div className='h-[550px] w-full' style={{ opacity: visible ? 1 : 0, transition: 'opacity 220ms ease' }}>
           <Pie data={data} options={options} />
         </div>
       </div>
@@ -569,7 +579,7 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
           <img src={assets.user_icon} alt='user icon' className='w-8 rounded-full shrink-0' />
         </div>
       ) : (
-        <div className='flex flex-col gap-2 w-full max-w-2xl my-4 wrap-break-word'>
+        <div className='flex flex-col gap-2 w-full max-w-4xl my-4 wrap-break-word'>
           {message.isImage ? (
             <img src={message.content} alt='AIgenerated' className='w-full max-w-md mt-2 rounded-md' />
           ) : (
@@ -585,7 +595,65 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
               }}
             >
               <div style={{ width: '100%', minHeight: '1px' }}>
-                {renderMarkdown(message.content)}
+                {/* Parse content and replace chart placeholders with actual charts */}
+                {(() => {
+                  const content = message.content || ''
+                  const chartPlaceholderRegex = /\{\{CHART:(\w+)\}\}/g
+                  const parts = []
+                  let lastIndex = 0
+                  let match
+
+                  // Find all chart placeholders
+                  while ((match = chartPlaceholderRegex.exec(content)) !== null) {
+                    // Add text before placeholder
+                    if (match.index > lastIndex) {
+                      parts.push({
+                        type: 'text',
+                        content: content.substring(lastIndex, match.index)
+                      })
+                    }
+
+                    // Add chart placeholder
+                    const chartId = match[1]
+                    const chart = charts.find(c => c.id === chartId)
+                    if (chart) {
+                      parts.push({
+                        type: 'chart',
+                        chart: chart,
+                        id: chartId
+                      })
+                    }
+
+                    lastIndex = match.index + match[0].length
+                  }
+
+                  // Add remaining text
+                  if (lastIndex < content.length) {
+                    parts.push({
+                      type: 'text',
+                      content: content.substring(lastIndex)
+                    })
+                  }
+
+                  // If no placeholders found, just render markdown normally
+                  if (parts.length === 0) {
+                    return renderMarkdown(content)
+                  }
+
+                  // Render parts with charts interspersed
+                  return parts.map((part, idx) => {
+                    if (part.type === 'text') {
+                      return <div key={`text-${idx}`}>{renderMarkdown(part.content)}</div>
+                    } else if (part.type === 'chart') {
+                      return (
+                        <div key={`chart-${idx}`} className='my-6 w-full'>
+                          <ChartCard chart={part.chart} index={idx} />
+                        </div>
+                      )
+                    }
+                    return null
+                  })
+                })()}
               </div>
 
               {/* Render charts with smooth transition - placeholders fade out as charts appear */}
