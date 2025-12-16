@@ -1010,39 +1010,44 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
     })
   }
 
+  // Memoize markdown configuration to prevent layout thrashing during typing
+  const remarkPlugins = useMemo(() => [remarkGfm], [])
+
+  const markdownComponents = useMemo(() => ({
+    a: ({ node, ...props }) => (
+      <a
+        {...props}
+        target='_blank'
+        rel='noreferrer noopener'
+        className='text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300'
+      />
+    ),
+    table: ({ node, ...props }) => (
+      <div className="overflow-x-auto my-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <table {...props} className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 text-sm" />
+      </div>
+    ),
+    thead: ({ node, ...props }) => (
+      <thead {...props} className="bg-gray-50 dark:bg-gray-800" />
+    ),
+    tbody: ({ node, ...props }) => (
+      <tbody {...props} className="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900" />
+    ),
+    tr: ({ node, ...props }) => (
+      <tr {...props} className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" />
+    ),
+    th: ({ node, ...props }) => (
+      <th {...props} className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" />
+    ),
+    td: ({ node, ...props }) => (
+      <td {...props} className="px-4 py-3 whitespace-normal text-gray-700 dark:text-gray-300 leading-relaxed" />
+    )
+  }), [])
+
   const renderMarkdown = (content) => (
     <Markdown
-      remarkPlugins={[remarkGfm]}
-      components={{
-        a: ({ node, ...props }) => (
-          <a
-            {...props}
-            target='_blank'
-            rel='noreferrer noopener'
-            className='text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300'
-          />
-        ),
-        table: ({ node, ...props }) => (
-          <div className="overflow-x-auto my-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <table {...props} className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 text-sm" />
-          </div>
-        ),
-        thead: ({ node, ...props }) => (
-          <thead {...props} className="bg-gray-50 dark:bg-gray-800" />
-        ),
-        tbody: ({ node, ...props }) => (
-          <tbody {...props} className="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900" />
-        ),
-        tr: ({ node, ...props }) => (
-          <tr {...props} className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" />
-        ),
-        th: ({ node, ...props }) => (
-          <th {...props} className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" />
-        ),
-        td: ({ node, ...props }) => (
-          <td {...props} className="px-4 py-3 whitespace-normal text-gray-700 dark:text-gray-300 leading-relaxed" />
-        )
-      }}
+      remarkPlugins={remarkPlugins}
+      components={markdownComponents}
     >
       {linkifyContent(content)}
     </Markdown>
