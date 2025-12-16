@@ -24,5 +24,10 @@ export default defineConfig({
         }
       }
     }
+  },
+
+  // Force optimization of ESM dependencies
+  optimizeDeps: {
+    include: ['react-markdown', 'remark-gfm']
   }
 })

@@ -23,7 +23,7 @@ const ChatBox = () => {
   const lastMessageCountRef = useRef(0)
   const fileInputRef = useRef(null)
   const textareaRef = useRef(null)
-  const abortControllerRef = useRef(null) // Added missing ref
+  const abortControllerRef = useRef(null)
 
   // Auto-scroll to bottom when messages change (used by scroll button)
   const scrollToBottom = () => {
@@ -43,20 +43,50 @@ const ChatBox = () => {
     }
   }
 
-  // Detect new message and scroll to it immediately
+  // Smooth auto-scroll during typing - only if user is near bottom
   useEffect(() => {
     if (messages.length > lastMessageCountRef.current) {
-      // New message detected - scroll to bottom immediately
+      // New message detected
       if (scrollContainerRef.current) {
-        setTimeout(() => {
-          if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight
-          }
-        }, 50)
+        const { scrollTop, scrollHeight, clientHeight } = scrollContainerRef.current
+        const isNearBottom = scrollHeight - scrollTop - clientHeight < 50
+
+        // Only auto-scroll if user is near bottom (not manually scrolled up)
+        if (isNearBottom || isTypingRef.current) {
+          requestAnimationFrame(() => {
+            if (scrollContainerRef.current) {
+              scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight
+            }
+          })
+        }
       }
     }
     lastMessageCountRef.current = messages.length
   }, [messages.length])
+
+  // Smooth scroll during typing animation
+  useEffect(() => {
+    if (!isTypingRef.current) return
+
+    let rafId
+    const smoothScroll = () => {
+      if (scrollContainerRef.current) {
+        const { scrollTop, scrollHeight, clientHeight } = scrollContainerRef.current
+        const isNearBottom = scrollHeight - scrollTop - clientHeight < 50
+
+        if (isNearBottom) {
+          scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight
+        }
+      }
+
+      if (isTypingRef.current) {
+        rafId = requestAnimationFrame(smoothScroll)
+      }
+    }
+
+    rafId = requestAnimationFrame(smoothScroll)
+    return () => cancelAnimationFrame(rafId)
+  }, [messages])
 
   // Mock backend handler for PDF analysis
   const simulatePDFAnalysis = async (file, prompt) => {
@@ -79,10 +109,11 @@ const ChatBox = () => {
     })
   }
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e, overridePrompt = null) => {
     e.preventDefault()
     // Trim spaces and check if message is empty
-    const trimmedPrompt = prompt.trim()
+    const textToSubmit = overridePrompt || prompt
+    const trimmedPrompt = textToSubmit.trim()
     const hasFile = uploadedFile !== null
 
     // If no prompt and no file, return
@@ -133,13 +164,11 @@ const ChatBox = () => {
         // Use typing animation utility
         const animator = createTypingAnimation(pdfContent, pdfCharts, {
           onUpdate: (currentText) => {
-            setMessages(prev => {
-              const updated = [...prev]
-              if (updated.length > 0) {
-                updated[updated.length - 1].content = currentText
-              }
-              return updated
-            })
+            setMessages(prev => prev.map((msg, idx) =>
+              idx === prev.length - 1
+                ? { ...msg, content: currentText }
+                : msg
+            ))
           },
           onComplete: (finalText, charts) => {
             setMessages(prev => {
@@ -214,11 +243,11 @@ const ChatBox = () => {
         // Use typing animation utility
         const animator = createTypingAnimation(fullContent, charts, {
           onUpdate: (currentText) => {
-            setMessages(prev => {
-              const updated = [...prev]
-              updated[updated.length - 1].content = currentText
-              return updated
-            })
+            setMessages(prev => prev.map((msg, idx) =>
+              idx === prev.length - 1
+                ? { ...msg, content: currentText }
+                : msg
+            ))
           },
           onComplete: (finalText, charts) => {
             setMessages(prev => {
@@ -312,11 +341,11 @@ const ChatBox = () => {
         // Use typing animation utility
         const animator = createTypingAnimation(fullContent, charts, {
           onUpdate: (currentText) => {
-            setMessages(prev => {
-              const updated = [...prev]
-              updated[updated.length - 1].content = currentText
-              return updated
-            })
+            setMessages(prev => prev.map((msg, idx) =>
+              idx === prev.length - 1
+                ? { ...msg, content: currentText }
+                : msg
+            ))
           },
           onComplete: (finalText, charts) => {
             setMessages(prev => {
@@ -442,7 +471,6 @@ const ChatBox = () => {
           })}
         </div>
 
-        {/* There dots loading */}
         {Loading && (
           <div className='loader flex items-center gap-1.5 mt-2'>
             <div className='w-1.5 h-1.5 rounded-full bg-gray-700 dark:bg-white animate-bounce'></div>
@@ -451,7 +479,6 @@ const ChatBox = () => {
           </div>
         )}
 
-        {/* Scroll to bottom ref */}
         <div ref={messagesEndRef} />
       </div>
 
@@ -474,7 +501,39 @@ const ChatBox = () => {
         </div>
       )}
 
-      {/* Prompt Input Box Wrapper */}
+      {/* Suggested Queries Chips - ONLY SHOW WHEN NO MESSAGES */}
+      {messages.length === 0 && !Loading && (
+        <div className='flex flex-wrap justify-center gap-2 mb-4 px-4 w-full md:max-w-4xl mx-auto'>
+          {[
+            "Market outlook for Metformin",
+            "Patent timeline for Lisinopril",
+            "Clinical trials for Atorvastatin",
+            "Import-export data for Omeprazole",
+            "Revenue forecast for Amlodipine",
+            "Top competitors for Sertraline",
+            "Supply chain risks for Albuterol",
+            "Regulatory updates for Levothyroxine"
+          ].map((query, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                setPrompt(query)
+                // Small timeout to ensure state update before submit
+                setTimeout(() => {
+                  const fakeEvent = { preventDefault: () => { } }
+                  onSubmit(fakeEvent, query)
+                }, 0)
+              }}
+              className='px-3 py-1.5 text-xs sm:text-sm font-medium border rounded-full transition-all shadow-sm backdrop-blur-md
+                bg-white text-gray-700 border-gray-200 hover:bg-gray-50 hover:border-violet-300
+                dark:bg-violet-600/20 dark:text-violet-100 dark:border-violet-500/30 dark:hover:bg-violet-600/40 dark:hover:border-violet-400/50'
+            >
+              {query}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className='relative'>
         {/* Scroll to bottom button - positioned relative to form */}
         {showScrollButton && !Loading && (
@@ -502,9 +561,7 @@ const ChatBox = () => {
           className='bg-green-50 dark:bg-green-900/30 border border-green-600 dark:border-green-700/50 rounded-lg w-full md:max-w-2xl lg:max-w-3xl p-2 mx-auto flex flex-col gap-2 shrink-0 self-center'
           onSubmit={onSubmit}
         >
-          {/* Input row */}
           <div className='flex gap-2 items-end'>
-            {/* Plus Icon for Document Upload */}
             <label className='flex items-center justify-center p-2 rounded transition-colors shrink-0 cursor-pointer hover:bg-green-100 dark:hover:bg-green-700/50' title='Upload PDF'>
               <input
                 ref={fileInputRef}
@@ -548,7 +605,6 @@ const ChatBox = () => {
               }}
             />
 
-            {/* Send Button - shown when not loading */}
             {!Loading && (
               <button
                 type='submit'
@@ -558,7 +614,6 @@ const ChatBox = () => {
               </button>
             )}
 
-            {/* Stop Button - shown when loading */}
             {Loading && (
               <button
                 type='button'
