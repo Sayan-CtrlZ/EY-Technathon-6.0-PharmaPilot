@@ -473,6 +473,7 @@ const ChatBox = () => {
 
         {Loading && (
           <div className='loader flex items-center gap-1.5 mt-2'>
+            <span className='text-sm text-gray-500 dark:text-gray-400 mr-1'>Thinking</span>
             <div className='w-1.5 h-1.5 rounded-full bg-gray-700 dark:bg-white animate-bounce'></div>
             <div className='w-1.5 h-1.5 rounded-full bg-gray-700 dark:bg-white animate-bounce'></div>
             <div className='w-1.5 h-1.5 rounded-full bg-gray-700 dark:bg-white animate-bounce'></div>
