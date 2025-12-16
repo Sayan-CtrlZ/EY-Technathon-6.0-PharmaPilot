@@ -22,7 +22,7 @@ const Login = () => {
     setError("")
     setInfo("")
     setLoading(true)
-    
+
     try {
       if (state === "forgot") {
         if (!email) {
@@ -48,27 +48,27 @@ const Login = () => {
           setLoading(false)
           return
         }
-        
+
         if (password.length < 8) {
           setError("Password must be at least 8 characters long")
           setLoading(false)
           return
         }
-        
+
         const userData = await apiRegister(email, fullName, password)
-        
-        // Auto-login after registration
-        await apiLogin(email, password)
+
+        // No need for separate login - registration returns user data
+        // Auto-login by using the registration response directly
         loginUser(userData)
         setLoading(false)
         navigate('/loading')
       } else {
         // Login existing user
         await apiLogin(email, password)
-        
+
         // Fetch actual user data from backend (session is in httpOnly cookies)
         const userData = await getCurrentUser()
-        
+
         loginUser(userData)
         setLoading(false)
         navigate('/loading')
@@ -82,8 +82,8 @@ const Login = () => {
   }
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
+    <form
+      onSubmit={handleSubmit}
       name={state === "login" ? "login-form" : state === "register" ? "signup-form" : "forgot-password-form"}
       method="post"
       className="flex flex-col gap-4 m-auto items-start p-8 py-12 w-80 sm:w-[352px] text-gray-500 rounded-lg shadow-xl border border-gray-200 bg-white"
@@ -135,16 +135,16 @@ const Login = () => {
         <div className="w-full ">
           <p>Password</p>
           <div className="relative">
-            <input 
+            <input
               id="password"
               name="password"
               autoComplete={state === "register" ? "new-password" : "current-password"}
-              onChange={(e) => setPassword(e.target.value)} 
-              value={password} 
-              placeholder="Enter your password" 
-              className="border border-gray-200 rounded w-full p-2 mt-1 pr-10 outline-emerald-500" 
-              type={showPassword ? "text" : "password"} 
-              required 
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              placeholder="Enter your password"
+              className="border border-gray-200 rounded w-full p-2 mt-1 pr-10 outline-emerald-500"
+              type={showPassword ? "text" : "password"}
+              required
             />
             <button
               type="button"
