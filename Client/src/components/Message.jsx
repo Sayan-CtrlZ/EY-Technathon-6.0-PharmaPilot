@@ -1023,24 +1023,24 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
       />
     ),
     table: ({ node, ...props }) => (
-      <div className="overflow-x-auto my-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-        <table {...props} className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 text-sm" />
+      <div className="overflow-x-auto my-4 rounded-lg shadow-sm">
+        <table {...props} className="min-w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm" />
       </div>
     ),
     thead: ({ node, ...props }) => (
-      <thead {...props} className="bg-gray-50 dark:bg-gray-800" />
+      <thead {...props} className="bg-gray-100 dark:bg-gray-800" />
     ),
     tbody: ({ node, ...props }) => (
-      <tbody {...props} className="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900" />
+      <tbody {...props} className="bg-white dark:bg-gray-900" />
     ),
     tr: ({ node, ...props }) => (
       <tr {...props} className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" />
     ),
     th: ({ node, ...props }) => (
-      <th {...props} className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" />
+      <th {...props} className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider" />
     ),
     td: ({ node, ...props }) => (
-      <td {...props} className="px-4 py-3 whitespace-normal text-gray-700 dark:text-gray-300 leading-relaxed" />
+      <td {...props} className="border border-gray-300 dark:border-gray-600 px-4 py-3 whitespace-normal text-gray-700 dark:text-gray-300 leading-relaxed" />
     )
   }), [])
 
