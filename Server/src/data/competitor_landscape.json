@@ -1,0 +1,197 @@
+{
+  "type2_diabetes": {
+    "therapy_area": "Type 2 Diabetes",
+    "molecules": [
+      {
+        "molecule": "Semaglutide",
+        "brands": ["Ozempic", "Rybelsus", "Wegovy"],
+        "manufacturers": ["Novo Nordisk"],
+        "market_share_percent_2024": 36.2,
+        "dosage_forms": ["SC weekly", "Oral daily"],
+        "patent_expiry": { "us": 2032, "eu": 2031, "india": 2033 },
+        "competitor_intensity": "High",
+        "pipeline_competitors_phase3": 7,
+        "pricing_tier": "Premium",
+        "formulation_gaps": ["No once-monthly depot", "No pediatric formulation"]
+      },
+      {
+        "molecule": "Dapagliflozin",
+        "brands": ["Farxiga"],
+        "manufacturers": ["AstraZeneca"],
+        "market_share_percent_2024": 14.8,
+        "dosage_forms": ["Oral daily"],
+        "patent_expiry": { "us": 2026, "eu": 2027, "india": 2028 },
+        "competitor_intensity": "Moderate",
+        "pipeline_competitors_phase3": 4,
+        "repurposing_activity": ["CKD", "Heart Failure"],
+        "pricing_tier": "Mid"
+      }
+    ]
+  },
+
+  "autoimmune_dermatology": {
+    "therapy_area": "Autoimmune to Dermatology",
+    "molecules": [
+      {
+        "molecule": "Adalimumab",
+        "brands": ["Humira", "Multiple biosimilars"],
+        "manufacturers": ["AbbVie", "Various (biosimilars)"],
+        "market_share_percent_2024": 28.4,
+        "biosimilar_count": 17,
+        "patent_expiry": { "us": 2023, "eu": 2018, "india": "Expired" },
+        "competitor_intensity": "Very High",
+        "price_erosion_percent_since_biosimilars": 78,
+        "innovation_gap": "No thermostable autoinjector"
+      },
+      {
+        "molecule": "Secukinumab",
+        "brands": ["Cosentyx"],
+        "manufacturers": ["Novartis"],
+        "market_share_percent_2024": 11.5,
+        "patent_expiry": { "us": 2030, "eu": 2029, "india": 2031 },
+        "pipeline_competitors_phase3": 5,
+        "mechanistic_overlap": ["AS", "Psoriasis", "PsA"]
+      }
+    ]
+  },
+
+  "oncology": {
+    "therapy_area": "Oncology - Checkpoint & Targeted Therapies",
+    "molecules": [
+      {
+        "molecule": "Pembrolizumab",
+        "brands": ["Keytruda"],
+        "manufacturers": ["Merck"],
+        "market_share_percent_2024": 22.6,
+        "competitor_count": 12,
+        "patent_expiry": { "us": 2028, "eu": 2029, "india": 2030 },
+        "pipeline_competitors_phase3": 21,
+        "biomarker_dependence": ["PD-L1"],
+        "innovation_gaps": ["Lower-cost biosimilar", "Oral IO formulations"]
+      },
+      {
+        "molecule": "Osimertinib",
+        "brands": ["Tagrisso"],
+        "manufacturers": ["AstraZeneca"],
+        "market_share_percent_2024": 14.1,
+        "competitor_count": 8,
+        "patent_expiry": { "us": 2035, "eu": 2034, "india": 2036 },
+        "targeted_mutation": ["EGFR T790M"],
+        "pipeline_competitors_phase3": 6
+      }
+    ]
+  },
+
+  "respiratory_asthma_copd": {
+    "therapy_area": "Respiratory - Asthma & COPD",
+    "molecules": [
+      {
+        "molecule": "Budesonide/Formoterol",
+        "brands": ["Symbicort", "Generics"],
+        "manufacturers": ["AstraZeneca", "Multiple generics"],
+        "market_share_percent_2024": 18.9,
+        "competitor_count": 28,
+        "device_forms": ["MDI", "DPI"],
+        "patent_expiry": "Expired",
+        "device_innovation_gap": ["Smart inhaler support", "Pediatric-specific inhaler"]
+      },
+      {
+        "molecule": "Umeclidinium/Vilanterol",
+        "brands": ["Anoro Ellipta"],
+        "manufacturers": ["GSK"],
+        "market_share_percent_2024": 6.4,
+        "competitor_count": 10,
+        "device_forms": ["Ellipta DPI"],
+        "heat_stability_concern": true
+      }
+    ]
+  },
+
+  "cns": {
+    "therapy_area": "CNS - Depression & Schizophrenia",
+    "molecules": [
+      {
+        "molecule": "Fluoxetine",
+        "brands": ["Prozac", "Generics"],
+        "patent_expiry": "Expired",
+        "market_share_percent_2024": 12.7,
+        "competitor_count": 30,
+        "pricing_tier": "Low",
+        "side_effect_burden": "Moderate",
+        "formulation_gaps": ["Once-weekly"]
+      },
+      {
+        "molecule": "Aripiprazole",
+        "brands": ["Abilify", "Abilify Maintena"],
+        "market_share_percent_2024": 9.4,
+        "long_acting_available": true,
+        "depot_competitor_count": 6,
+        "adherence_improvement_potential": 8.4
+      }
+    ]
+  },
+
+  "ckd": {
+    "therapy_area": "Chronic Kidney Disease",
+    "molecules": [
+      {
+        "molecule": "Finerenone",
+        "brands": ["Kerendia"],
+        "manufacturers": ["Bayer"],
+        "market_share_percent_2024": 6.8,
+        "competitor_count": 3,
+        "patent_expiry": { "us": 2031, "eu": 2030 },
+        "trial_pipeline": { "phase3": 4 },
+        "mechanistic_overlap": ["Cardio-renal", "Fibrosis"],
+        "formulation_gap": ["No FDC with SGLT2s"]
+      }
+    ]
+  },
+
+  "rheumatoid_arthritis": {
+    "therapy_area": "Rheumatoid Arthritis",
+    "molecules": [
+      {
+        "molecule": "Tofacitinib",
+        "brands": ["Xeljanz"],
+        "competitor_count": 11,
+        "patent_expiry": { "us": 2025, "eu": 2026 },
+        "boxed_warning": true,
+        "market_share_percent_2024": 7.1,
+        "formulation_gaps": ["Topical for flare relief"]
+      },
+      {
+        "molecule": "Tocilizumab",
+        "brands": ["Actemra"],
+        "market_share_percent_2024": 8.9,
+        "biosimilar_pipeline_count": 7,
+        "pricing_tier": "High",
+        "formulation_opportunities": ["Long-acting SC"]
+      }
+    ]
+  },
+
+  "hiv": {
+    "therapy_area": "HIV Antiretroviral Therapy",
+    "molecules": [
+      {
+        "molecule": "Dolutegravir",
+        "brands": ["Tivicay", "Triumeq"],
+        "market_share_percent_2024": 29.3,
+        "competitor_count": 10,
+        "once_daily": true,
+        "long_acting_gap": "Oral long-acting absent",
+        "patent_expiry": { "us": 2028, "eu": 2029 }
+      },
+      {
+        "molecule": "Cabotegravir (LA)",
+        "brands": ["Cabenuva"],
+        "market_share_percent_2024": 6.5,
+        "long_acting": true,
+        "administration": "Monthly or bi-monthly IM",
+        "competitor_count": 2,
+        "innovation_opportunities": ["At-home administration"]
+      }
+    ]
+  }
+}

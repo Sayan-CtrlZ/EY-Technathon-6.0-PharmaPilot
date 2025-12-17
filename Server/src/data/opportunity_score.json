@@ -1,0 +1,306 @@
+{
+  "respiratory_asthma_india": {
+    "therapy_area": "Respiratory - Asthma",
+    "country": "India",
+    "opportunity_score": 8.2,
+    "priority": "High",
+    "drivers": [
+      "Rising pediatric prevalence",
+      "Poor access to pediatric-specific devices",
+      "Urban pollution increasing disease burden"
+    ],
+    "barriers": [
+      "Affordability differences across states",
+      "Low spirometry/diagnostic penetration in rural areas"
+    ],
+    "adherence_rate_percent": 62,
+    "digital_engagement_score": 3.8,
+    "trial_signal": {
+      "local_phase2": 14,
+      "global_phase3": 9,
+      "patent_blockers": false
+    },
+    "payer_coverage_index": 4.2,
+    "estimated_roi_band": "Medium-High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "Pediatric inhaler + patient support program",
+      "Smart inhaler with adherence nudges",
+      "Heat-stable disposable inhalers for tier-2 cities"
+    ],
+    "notes": "High unmet need for pediatric-friendly, low-cost delivery devices; attractive for lifecycle and new formulation plays."
+  },
+
+  "respiratory_copd_india": {
+    "therapy_area": "Respiratory - COPD",
+    "country": "India",
+    "opportunity_score": 7.9,
+    "priority": "High",
+    "drivers": [
+      "High smoking prevalence",
+      "Ageing population",
+      "Rising hospital readmission rates"
+    ],
+    "barriers": [
+      "Low diagnostic infrastructure in rural settings",
+      "High price sensitivity among patients"
+    ],
+    "adherence_rate_percent": 58,
+    "digital_engagement_score": 3.2,
+    "trial_signal": {
+      "local_phase2": 9,
+      "global_phase3": 6
+    },
+    "payer_coverage_index": 3.9,
+    "estimated_roi_band": "Medium",
+    "risk_level": "Medium-High",
+    "recommended_innovations": [
+      "Long-acting nebulized formulations",
+      "Once-daily triple FDC inhaler",
+      "Digital adherence + refill delivery"
+    ],
+    "notes": "Strong opportunity for adherence-focused formulations and FDCs in urban and semi-urban markets."
+  },
+
+  "diabetes_type2_usa": {
+    "therapy_area": "Type 2 Diabetes - Second Line",
+    "country": "USA",
+    "opportunity_score": 8.6,
+    "priority": "High",
+    "drivers": [
+      "Rapid GLP-1 adoption and high payer interest",
+      "Large addressable patient base with comorbidities",
+      "Strong demand for weight-loss + diabetes dual-indication"
+    ],
+    "barriers": [
+      "High competitive intensity and premium pricing",
+      "Stringent regulatory pathways for new formulations"
+    ],
+    "adherence_rate_percent": 71,
+    "digital_engagement_score": 7.1,
+    "trial_signal": {
+      "local_phase2": 32,
+      "global_phase3": 48
+    },
+    "payer_coverage_index": 7.5,
+    "estimated_roi_band": "High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "Oral depot GLP-1 formulation",
+      "Once-monthly injectable GLP-1",
+      "Affordable GLP-1 biosimilars with patient support"
+    ],
+    "notes": "High potential ROI but requires significant clinical/Regulatory work and premium positioning."
+  },
+
+  "oncology_global": {
+    "therapy_area": "Oncology - Rare Indications",
+    "country": "Global",
+    "opportunity_score": 7.4,
+    "priority": "Medium-High",
+    "drivers": [
+      "Designation incentives (orphan status) and premium pricing",
+      "High unmet need for many rare tumor types"
+    ],
+    "barriers": [
+      "Small patient populations (commercial scale limits)",
+      "High clinical & biomarker complexity"
+    ],
+    "adherence_rate_percent": 85,
+    "digital_engagement_score": 6.4,
+    "trial_signal": {
+      "local_phase1": 210,
+      "global_phase2": 312,
+      "global_phase3": 27
+    },
+    "payer_coverage_index": 6.2,
+    "estimated_roi_band": "Medium",
+    "risk_level": "High",
+    "recommended_innovations": [
+      "Niche targeted small molecules for orphan oncology",
+      "AI-driven companion diagnostics + biomarker enrichment",
+      "Cost-efficient immunotherapy biosimilars"
+    ],
+    "notes": "Good strategic fit for high-margin orphan indications; execution risk high due to trial complexity."
+  },
+
+  "autoimmune_dermatology_global": {
+    "therapy_area": "Autoimmune → Dermatology",
+    "country": "Global",
+    "opportunity_score": 7.8,
+    "priority": "Medium-High",
+    "drivers": [
+      "Price premiums in dermatology",
+      "Mechanistic overlap enabling repurposing"
+    ],
+    "barriers": [
+      "Biosimilar competition for older biologics",
+      "Regulatory requirements for novel indications"
+    ],
+    "adherence_rate_percent": 68,
+    "digital_engagement_score": 5.6,
+    "trial_signal": {
+      "phase2": 44,
+      "phase3": 18
+    },
+    "payer_coverage_index": 6.8,
+    "estimated_roi_band": "Medium-High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "Dermatology-specific dosing/formulations for existing biologics",
+      "Topical small-molecule JAK inhibitors for targeted flares",
+      "Thermostable biologic autoinjectors for emerging markets"
+    ],
+    "notes": "Repurposing between autoimmune and dermatology yields attractive margin expansion if IP/FTO is navigated."
+  },
+
+  "cns_global": {
+    "therapy_area": "CNS - Depression & Schizophrenia",
+    "country": "Global",
+    "opportunity_score": 8.0,
+    "priority": "High",
+    "drivers": [
+      "High discontinuation from side-effects",
+      "Growing interest in long-acting/rapid-acting agents"
+    ],
+    "barriers": [
+      "Stigma limiting diagnosis in some regions",
+      "Complex regulatory safety expectations for novel agents"
+    ],
+    "adherence_rate_percent": 54,
+    "digital_engagement_score": 5.2,
+    "trial_signal": {
+      "local_phase2": 47,
+      "global_phase3": 33
+    },
+    "payer_coverage_index": 5.1,
+    "estimated_roi_band": "High",
+    "risk_level": "Medium-High",
+    "recommended_innovations": [
+      "Long-acting depot injections for antipsychotics",
+      "Rapid-acting antidepressants for severe depression (at-home options)",
+      "Transdermal systems minimizing systemic side-effects"
+    ],
+    "notes": "Large patient base and adherence gap create strong commercial rationale for long-acting formulations."
+  },
+
+  "ckd_global": {
+    "therapy_area": "Chronic Kidney Disease",
+    "country": "Global",
+    "opportunity_score": 8.1,
+    "priority": "High",
+    "drivers": [
+      "Rising CKD prevalence driven by diabetes/hypertension",
+      "Positive cardio-renal outcomes for SGLT2s and MRAs"
+    ],
+    "barriers": [
+      "Complex endpoints for renal trials (hard to show surrogate outcomes)",
+      "Reimbursement differences across payers"
+    ],
+    "adherence_rate_percent": 69,
+    "digital_engagement_score": 4.7,
+    "trial_signal": {
+      "phase2": 28,
+      "phase3": 16
+    },
+    "payer_coverage_index": 6.0,
+    "estimated_roi_band": "Medium-High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "CKD-specific optimized SGLT2 dosing",
+      "Fixed-dose cardio-renal combinations",
+      "Low-cost screening + early intervention digital bundle"
+    ],
+    "notes": "CKD repurposing from CV molecules provides strong translational rationale and payer interest."
+  },
+
+  "rheumatoid_arthritis_global": {
+    "therapy_area": "Rheumatoid Arthritis",
+    "country": "Global",
+    "opportunity_score": 7.2,
+    "priority": "Medium",
+    "drivers": [
+      "High prevalence of moderate-to-severe RA",
+      "Established biologic pathways enabling biosimilar strategies"
+    ],
+    "barriers": [
+      "Safety concerns with JAK inhibitors limiting rapid adoption",
+      "Intense biosimilar competition compressing margins"
+    ],
+    "adherence_rate_percent": 73,
+    "digital_engagement_score": 5.9,
+    "trial_signal": {
+      "phase2": 21,
+      "phase3": 12
+    },
+    "payer_coverage_index": 6.6,
+    "estimated_roi_band": "Medium",
+    "risk_level": "Medium-High",
+    "recommended_innovations": [
+      "Depot biologics with less frequent dosing",
+      "Topical or localized therapies for flares",
+      "Safety-improved JAK analogues with clear labeling"
+    ],
+    "notes": "Biosimilar options and safety profile considerations should guide positioning and expected returns."
+  },
+
+  "hiv_global": {
+    "therapy_area": "HIV Treatment",
+    "country": "Global",
+    "opportunity_score": 7.6,
+    "priority": "Medium-High",
+    "drivers": [
+      "Strong public health funding in many markets",
+      "Growing demand for long-acting PrEP and maintenance regimens"
+    ],
+    "barriers": [
+      "High manufacturing complexity for LAI products",
+      "Distribution challenges for cold-chain dependent formulations"
+    ],
+    "adherence_rate_percent": 84,
+    "digital_engagement_score": 6.9,
+    "trial_signal": {
+      "phase2": 18,
+      "phase3": 9
+    },
+    "payer_coverage_index": 7.0,
+    "estimated_roi_band": "Medium-High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "Long-acting oral or injectable PrEP",
+      "At-home administration models",
+      "Cost-reduced LAI manufacturing processes"
+    ],
+    "notes": "LAI and long-acting PrEP represent strategic growth corridors with strong payer & public-health interest."
+  },
+
+  "infectious_latam": {
+    "therapy_area": "Infectious Diseases",
+    "country": "LATAM",
+    "opportunity_score": 8.4,
+    "priority": "High",
+    "drivers": [
+      "High disease burden (dengue, TB, hepatitis)",
+      "Low multinational penetration creating commercial openings"
+    ],
+    "barriers": [
+      "Fragmented national procurement systems",
+      "Variable diagnostics and surveillance quality"
+    ],
+    "adherence_rate_percent": 66,
+    "digital_engagement_score": 3.9,
+    "trial_signal": {
+      "local_phase2": 16,
+      "global_phase3": 7
+    },
+    "payer_coverage_index": 4.0,
+    "estimated_roi_band": "Medium-High",
+    "risk_level": "Medium",
+    "recommended_innovations": [
+      "Volume-focused generics with improved cold-chain stability",
+      "Community-based distribution + adherence programs",
+      "Diagnostic-integrated treatment bundles"
+    ],
+    "notes": "Emerging markets present volume-led opportunities; margins require scale and cost optimization."
+  }
+}
