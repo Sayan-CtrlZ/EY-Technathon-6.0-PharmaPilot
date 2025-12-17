@@ -504,34 +504,37 @@ const ChatBox = () => {
 
       {/* Suggested Queries Chips - ONLY SHOW WHEN NO MESSAGES */}
       {messages.length === 0 && !Loading && (
-        <div className='flex flex-wrap justify-center gap-2 mb-4 px-4 w-full md:max-w-4xl mx-auto'>
-          {[
-            "Market outlook for Metformin",
-            "Patent timeline for Lisinopril",
-            "Clinical trials for Atorvastatin",
-            "Import-export data for Omeprazole",
-            "Revenue forecast for Amlodipine",
-            "Top competitors for Sertraline",
-            "Supply chain risks for Albuterol",
-            "Regulatory updates for Levothyroxine"
-          ].map((query, idx) => (
-            <button
-              key={idx}
-              onClick={() => {
-                setPrompt(query)
-                // Small timeout to ensure state update before submit
-                setTimeout(() => {
-                  const fakeEvent = { preventDefault: () => { } }
-                  onSubmit(fakeEvent, query)
-                }, 0)
-              }}
-              className='px-3 py-1.5 text-xs sm:text-sm font-medium border rounded-full transition-all shadow-sm backdrop-blur-md
+        <div className='flex flex-col items-center gap-2 mb-4 px-4 w-full md:max-w-4xl mx-auto'>
+          <p className='text-sm text-gray-500 dark:text-gray-400 font-medium mb-1'>Try asking...</p>
+          <div className='flex flex-wrap justify-center gap-2'>
+            {[
+              "Market outlook for Metformin",
+              "Patent timeline for Lisinopril",
+              "Clinical trials for Atorvastatin",
+              "Import-export data for Omeprazole",
+              "Revenue forecast for Amlodipine",
+              "Top competitors for Sertraline",
+              "Supply chain risks for Albuterol",
+              "Regulatory updates for Levothyroxine"
+            ].map((query, idx) => (
+              <button
+                key={idx}
+                onClick={() => {
+                  setPrompt(query)
+                  // Small timeout to ensure state update before submit
+                  setTimeout(() => {
+                    const fakeEvent = { preventDefault: () => { } }
+                    onSubmit(fakeEvent, query)
+                  }, 0)
+                }}
+                className='px-3 py-1.5 text-xs sm:text-sm font-medium border rounded-full transition-all shadow-sm backdrop-blur-md
                 bg-white text-gray-700 border-gray-200 hover:bg-gray-50 hover:border-violet-300
                 dark:bg-violet-600/20 dark:text-violet-100 dark:border-violet-500/30 dark:hover:bg-violet-600/40 dark:hover:border-violet-400/50'
-            >
-              {query}
-            </button>
-          ))}
+              >
+                {query}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
