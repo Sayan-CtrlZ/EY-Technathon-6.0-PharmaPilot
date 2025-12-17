@@ -1,0 +1,214 @@
+{
+  "diabetes_type2_secondline_usa": {
+    "therapy_area": "Type 2 Diabetes - Second Line",
+    "country": "USA",
+    "classes": [
+      {
+        "class_name": "GLP-1 Receptor Agonists",
+        "historical_market_size_usd_bn": {
+          "2019": 9.8, "2020": 11.2, "2021": 13.6, "2022": 16.4, "2023": 18.0, "2024": 19.4
+        },
+        "forecast_market_size_usd_bn": {
+          "2025": 22.2, "2026": 25.8, "2027": 29.4, "2028": 33.5
+        },
+        "cagr_percent_2024_2028": 14.2,
+        "rx_volume_mn": 41.2,
+        "competitor_count": 6,
+        "side_effect_profile": ["Nausea", "GI discomfort", "Weight loss"],
+        "differentiated_dosage_gap": "No depot oral forms",
+        "innovation_opportunities": [
+          "Oral depot GLP-1", "Once-monthly injections", "Obesity + diabetes dual-indication"
+        ]
+      },
+      {
+        "class_name": "SGLT-2 Inhibitors",
+        "historical_market_size_usd_bn": {
+          "2019": 6.1, "2020": 6.8, "2021": 7.9, "2022": 8.6, "2023": 9.0, "2024": 9.3
+        },
+        "cagr_percent_2024_2028": 11.1,
+        "competitor_count": 8,
+        "repurposing_potential": ["CKD Stage 3", "Heart Failure"],
+        "differentiated_dosage_gap": "No cardioprotective FDCs"
+      }
+    ]
+  },
+
+  "autoimmune_to_dermatology": {
+    "therapy_area": "Autoimmune → Dermatology",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "TNF-alpha Inhibitors",
+        "market_size_usd_bn_2024": 39.2,
+        "mechanistic_overlap_score": 8.9,
+        "competitor_count": 18,
+        "trial_activity_signal": {
+          "phase_3": 12,
+          "biosimilar_development": 16
+        },
+        "innovation_opportunities": [
+          "Depot autoinjectors", "Thermostable biosimilars"
+        ]
+      },
+      {
+        "class_name": "IL-17 Inhibitors",
+        "market_size_usd_bn_2024": 12.8,
+        "competitor_count": 7,
+        "clinical_response_speed": "Fast onset",
+        "pathway_overlap": "Psoriasis, AS, PsA"
+      }
+    ]
+  },
+
+  "oncology_class_segments": {
+    "therapy_area": "Oncology - Therapy Classes",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "Checkpoint Inhibitors",
+        "market_size_usd_bn_2024": 39.5,
+        "cagr_percent_2024_2028": 15.3,
+        "competitor_count": 14,
+        "biomarker_dependence": ["PD-L1", "TMB"],
+        "innovation_opportunities": [
+          "Lower-cost biosimilars", "AI-matched immunotherapy"
+        ]
+      },
+      {
+        "class_name": "Targeted Small Molecules",
+        "market_size_usd_bn_2024": 22.9,
+        "competitor_count": 26,
+        "mechanistic_clusters": ["EGFR", "ALK", "ROS1", "BRAF"],
+        "dosage_gap": "Few MR or once-weekly oral therapies"
+      }
+    ]
+  },
+
+  "respiratory_asthma_copd": {
+    "therapy_area": "Respiratory - Asthma & COPD",
+    "country": "India / Global",
+    "classes": [
+      {
+        "class_name": "ICS/LABA Inhalers",
+        "market_size_usd_mn_2024": 1680,
+        "competitor_count": 32,
+        "formulation_gaps": [
+          "Pediatric-friendly devices", "Low-cost BA inhalers"
+        ],
+        "device_innovation_gap": 8.1
+      },
+      {
+        "class_name": "LAMA/LABA Inhalers",
+        "market_size_usd_mn_2024": 720,
+        "cagr_percent_2024_2028": 9.1,
+        "competitor_count": 14,
+        "heat_stability_requirement": true
+      },
+      {
+        "class_name": "Biologics (Severe Asthma)",
+        "market_size_usd_bn_2024": 4.3,
+        "cagr_percent_2024_2028": 18.7,
+        "competitor_count": 6,
+        "price_barrier_score": 9.0
+      }
+    ]
+  },
+
+  "cns_depression_schizophrenia": {
+    "therapy_area": "CNS - Depression & Schizophrenia",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "SSRIs",
+        "historical_market_size_usd_bn": {
+          "2019": 5.1, "2020": 5.5, "2021": 5.9, "2022": 6.2, "2023": 6.4, "2024": 6.6
+        },
+        "competitor_count": 20,
+        "adherence_issue_score": 6.8,
+        "formulation_gap": ["Once-weekly oral"]
+      },
+      {
+        "class_name": "Atypical Antipsychotics",
+        "market_size_usd_bn_2024": 14.2,
+        "adherence_problem_score": 8.6,
+        "innovation_opportunities": [
+          "Long-acting depot injections", "Transdermal delivery"
+        ]
+      }
+    ]
+  },
+
+  "ckd_renal_classes_global": {
+    "therapy_area": "Chronic Kidney Disease",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "SGLT-2 Inhibitors (Renal Use)",
+        "market_size_usd_bn_2024": 6.1,
+        "evidence_strength_ckd": 9.3,
+        "trial_expansion_indications": ["Stage 3A", "Stage 4 CKD", "Diabetic nephropathy"],
+        "innovation_opportunities": [
+          "CKD-specific dose-optimized tablets",
+          "Fixed-dose cardio-renal combos"
+        ]
+      },
+      {
+        "class_name": "Non-Steroidal MRAs",
+        "market_size_usd_bn_2024": 2.4,
+        "cagr_percent_2024_2028": 19.4,
+        "competitor_count": 3,
+        "mechanistic_overlap": ["Renal fibrosis", "Cardio-renal axis"],
+        "repurposing_feasibility": "High"
+      }
+    ]
+  },
+
+  "rheumatoid_arthritis_immunology": {
+    "therapy_area": "Rheumatoid Arthritis",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "JAK Inhibitors",
+        "market_size_usd_bn_2024": 9.7,
+        "safety_boxed_warning": true,
+        "competitor_count": 7,
+        "trial_activity_signal": { "phase_3": 9 },
+        "formulation_opportunities": [
+          "Once-daily extended release",
+          "Topical JAK for flares"
+        ]
+      },
+      {
+        "class_name": "Anti-IL-6 Agents",
+        "market_size_usd_bn_2024": 6.2,
+        "cagr_percent_2024_2028": 12.2,
+        "mechanistic_rationale_dermatology": 7.5,
+        "innovation_opportunities": ["Depot injections"]
+      }
+    ]
+  },
+
+  "hiv_antiretroviral_classes": {
+    "therapy_area": "HIV Treatment",
+    "country": "Global",
+    "classes": [
+      {
+        "class_name": "INSTI-based Regimens",
+        "market_size_usd_bn_2024": 21.1,
+        "competitor_count": 6,
+        "once_daily_dominance_percent": 86,
+        "long_acting_gap": "Oral long-acting options unavailable",
+        "innovation_opportunities": [
+          "Oral LAI for PrEP",
+          "Extended-interval injectables"
+        ]
+      },
+      {
+        "class_name": "NNRTIs",
+        "market_size_usd_bn_2024": 4.2,
+        "declining_due_to_resistance": true,
+        "repurposing_potential": ["Hepatitis B", "Viral oncology"]
+      }
+    ]
+  }
+}

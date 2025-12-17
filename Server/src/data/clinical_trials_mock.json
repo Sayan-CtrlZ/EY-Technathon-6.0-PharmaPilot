@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "dataset_name": "Clinical Trials API Stub",
+    "version": "1.0",
+    "generated_date": "2025-12-07",
+    "description": "Simulated dataset of ongoing global clinical trials for EY Techathon 6.0 project.",
+    "source_style": ["ClinicalTrials.gov", "EMA Trial Registry", "WHO ICTRP"]
+  },
+
+  "trials": [
+    {
+      "trial_id": "CT-2025-001",
+      "title": "A Phase III Study of Semaglutide for Weight Management in Non-Diabetic Obese Patients",
+      "molecule": "Semaglutide",
+      "therapy_area": "Metabolic / Obesity",
+      "phase": "Phase 3",
+      "status": "Recruiting",
+      "start_date": "2024-04-01",
+      "estimated_completion_date": "2027-09-30",
+      "study_type": "Interventional",
+      "intervention_type": "Drug - GLP-1 Analog",
+      "sample_size": 3800,
+      "countries": ["USA", "Canada", "UK", "Germany", "India"],
+      "sponsor": {
+        "name": "Novo Nordisk",
+        "type": "Industry"
+      },
+      "collaborators": ["University of Toronto", "Cleveland Clinic"],
+      "indication_specifics": {
+        "subtype": "Non-diabetic obesity (BMI > 35)",
+        "primary_endpoint": "Percent weight reduction at week 60",
+        "secondary_endpoints": ["Waist circumference", "Cardiometabolic markers"]
+      },
+      "competitive_density_score_10": 9,
+      "risk_of_late_stage_competitor": "High",
+      "opportunity_relevance_score_10": 7,
+      "notes": "High global competition; strong relevance for metabolic expansion insights."
+    },
+
+    {
+      "trial_id": "CT-2025-002",
+      "title": "Osimertinib in Combination With Novel KRAS Inhibitor for EGFR-Mutant NSCLC",
+      "molecule": "Osimertinib",
+      "therapy_area": "Oncology (EGFR / NSCLC)",
+      "phase": "Phase 1/2",
+      "status": "Active, Not Recruiting",
+      "start_date": "2023-06-01",
+      "estimated_completion_date": "2026-12-15",
+      "study_type": "Interventional",
+      "sample_size": 240,
+      "countries": ["USA", "Japan", "South Korea"],
+      "sponsor": {
+        "name": "AstraZeneca",
+        "type": "Industry"
+      },
+      "collaborators": ["Dana-Farber Cancer Institute"],
+      "indication_specifics": {
+        "mutation": "EGFR T790M",
+        "primary_endpoint": "Dose-limiting toxicity (DLT)",
+        "secondary_endpoints": ["Overall survival", "PFS", "ORR"]
+      },
+      "competitive_density_score_10": 7,
+      "risk_of_late_stage_competitor": "Medium",
+      "opportunity_relevance_score_10": 9,
+      "notes": "Combination trial insights help define unmet needs and competitive saturation."
+    },
+
+    {
+      "trial_id": "CT-2025-003",
+      "title": "Long-Acting Cabotegravir for HIV Prevention in High-Risk Populations",
+      "molecule": "Cabotegravir (LA)",
+      "therapy_area": "HIV / Infectious Diseases",
+      "phase": "Phase 3",
+      "status": "Ongoing",
+      "start_date": "2022-09-09",
+      "estimated_completion_date": "2026-03-20",
+      "study_type": "Interventional",
+      "sample_size": 5200,
+      "countries": ["South Africa", "Kenya", "USA", "Brazil"],
+      "sponsor": {
+        "name": "ViiV Healthcare",
+        "type": "Industry"
+      },
+      "collaborators": ["NIH", "Bill & Melinda Gates Foundation"],
+      "indication_specifics": {
+        "primary_endpoint": "HIV incidence vs standard prophylaxis",
+        "delivery_route": "Long-acting Intramuscular"
+      },
+      "competitive_density_score_10": 4,
+      "risk_of_late_stage_competitor": "Low",
+      "opportunity_relevance_score_10": 8,
+      "notes": "Low competition + long-acting modality = strong lifecycle opportunity."
+    },
+
+    {
+      "trial_id": "CT-2025-004",
+      "title": "Pediatric Study of Umeclidinium/Vilanterol for Moderate COPD",
+      "molecule": "Umeclidinium/Vilanterol",
+      "therapy_area": "Respiratory / COPD",
+      "phase": "Phase 2",
+      "status": "Recruiting",
+      "start_date": "2024-01-22",
+      "estimated_completion_date": "2027-08-30",
+      "study_type": "Interventional",
+      "sample_size": 450,
+      "countries": ["India", "Australia", "UK"],
+      "sponsor": {
+        "name": "GSK",
+        "type": "Industry"
+      },
+      "collaborators": ["All India Institute of Medical Sciences"],
+      "indication_specifics": {
+        "age_group": "12–17 years",
+        "primary_endpoint": "FEV1 improvement at 12 weeks"
+      },
+      "competitive_density_score_10": 3,
+      "risk_of_late_stage_competitor": "Low",
+      "opportunity_relevance_score_10": 9,
+      "notes": "Pediatric trials create a strong life-cycle moat (paediatric exclusivity)."
+    },
+
+    {
+      "trial_id": "CT-2025-005",
+      "title": "Aripiprazole Monthly Depot vs Weekly Depot: Real-World Adherence Study",
+      "molecule": "Aripiprazole (Depot)",
+      "therapy_area": "CNS / Schizophrenia",
+      "phase": "Phase 4 (Post-market)",
+      "status": "Enrolling by invitation",
+      "start_date": "2023-02-01",
+      "estimated_completion_date": "2025-12-31",
+      "study_type": "Observational",
+      "sample_size": 1800,
+      "countries": ["USA", "Germany"],
+      "sponsor": {
+        "name": "Otsuka",
+        "type": "Industry"
+      },
+      "collaborators": ["Harvard School of Public Health"],
+      "indication_specifics": {
+        "primary_endpoint": "Monthly adherence score",
+        "secondary_endpoints": ["Hospitalization", "Symptom relapse"]
+      },
+      "competitive_density_score_10": 5,
+      "risk_of_late_stage_competitor": "Medium",
+      "opportunity_relevance_score_10": 8,
+      "notes": "Depot adherence data useful for lifecycle & repurposing strategy."
+    },
+
+    {
+      "trial_id": "CT-2025-006",
+      "title": "Dapagliflozin Added to Standard CKD Therapy for Stage 3 Renal Patients",
+      "molecule": "Dapagliflozin",
+      "therapy_area": "Diabetes / Renal",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "start_date": "2021-05-10",
+      "completion_date": "2024-12-01",
+      "study_type": "Interventional",
+      "sample_size": 2100,
+      "countries": ["USA", "Germany", "Japan"],
+      "sponsor": {
+        "name": "AstraZeneca",
+        "type": "Industry"
+      },
+      "collaborators": ["Karolinska Institute"],
+      "results_summary": {
+        "primary_outcome": "Reduced eGFR decline by 22%",
+        "safety_outcome": "No unexpected safety signals"
+      },
+      "competitive_density_score_10": 8,
+      "risk_of_late_stage_competitor": "High",
+      "opportunity_relevance_score_10": 7,
+      "notes": "Repurposing/label expansion valuable for lifecycle management."
+    },
+
+    {
+      "trial_id": "CT-2025-007",
+      "title": "Pantoprazole 40 mg Rapid-Dissolve Oral Thin Film in GERD",
+      "molecule": "Pantoprazole",
+      "therapy_area": "Gastroenterology",
+      "phase": "Phase 1/2",
+      "status": "Recruiting",
+      "start_date": "2024-06-15",
+      "estimated_completion_date": "2026-03-11",
+      "study_type": "Interventional",
+      "sample_size": 120,
+      "countries": ["India"],
+      "sponsor": {
+        "name": "Indian Pharma Innovations Ltd.",
+        "type": "Industry"
+      },
+      "intervention_type": "Novel formulation",
+      "indication_specifics": {
+        "primary_endpoint": "Tmax and Cmax comparison vs tablet",
+        "secondary_endpoints": ["Onset of relief"]
+      },
+      "competitive_density_score_10": 2,
+      "risk_of_late_stage_competitor": "Low",
+      "opportunity_relevance_score_10": 8,
+      "notes": "Good for lifecycle extension through differentiated formulation."
+    },
+
+    {
+      "trial_id": "CT-2025-008",
+      "title": "Azithromycin 100 mg Pediatric Suspension: Stability & Efficacy Study",
+      "molecule": "Azithromycin",
+      "therapy_area": "Infectious Diseases",
+      "phase": "Phase 4",
+      "status": "Ongoing",
+      "start_date": "2024-01-05",
+      "estimated_completion_date": "2026-08-18",
+      "study_type": "Interventional",
+      "sample_size": 900,
+      "countries": ["Nigeria", "Kenya", "India"],
+      "sponsor": {
+        "name": "WHO",
+        "type": "Non-profit"
+      },
+      "collaborators": ["Unicef", "Kenya Medical Research Institute"],
+      "indication_specifics": {
+        "primary_endpoint": "Clinical cure rate",
+        "secondary": ["Shelf-stability in 40°C environments"]
+      },
+      "competitive_density_score_10": 3,
+      "risk_of_late_stage_competitor": "Low",
+      "opportunity_relevance_score_10": 7,
+      "notes": "Useful for emerging market formulation optimization strategy."
+    }
+  ],
+
+  "summary_insights": {
+    "highest_competition_trials": ["Semaglutide (Obesity)", "Dapagliflozin (CKD)"],
+    "best_low_competition_opportunities": ["Pantoprazole thin-film", "Umeclidinium/Vilanterol Pediatrics"],
+    "fastest_growing_areas": ["Obesity", "Oncology combinations", "Long-acting injectables"],
+    "low-innovation spaces": ["Older antibiotics"],
+    "emerging_market_relevance": ["Azithromycin pediatric", "Cabotegravir LA"]
+  }
+}

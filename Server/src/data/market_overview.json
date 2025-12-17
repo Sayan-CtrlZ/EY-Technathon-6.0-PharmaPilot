@@ -1,0 +1,209 @@
+{
+  "respiratory_asthma_india": {
+    "therapy_area": "Respiratory - Asthma",
+    "country": "India",
+    "historical_market_size_usd_mn": {
+      "2019": 780,
+      "2020": 860,
+      "2021": 940,
+      "2022": 1020,
+      "2023": 1085,
+      "2024": 1120
+    },
+    "forecast_market_size_usd_mn": {
+      "2025": 1240,
+      "2026": 1385,
+      "2027": 1560,
+      "2028": 1698
+    },
+    "cagr_percent_2024_2028": 10.8,
+    "competitor_count": 42,
+    "brand_leaders": [
+      { "brand": "Seroflo", "company": "Cipla", "market_share_percent": 28 },
+      { "brand": "Foracort", "company": "Sun Pharma", "market_share_percent": 22 },
+      { "brand": "Symbicort", "company": "AstraZeneca", "market_share_percent": 12 }
+    ],
+    "epi_data": {
+      "prevalence_mn": 39,
+      "incidence_mn": 5.8,
+      "pediatric_percent": 34,
+      "urban_burden_percent": 41,
+      "mortality_rate_per_100k": 6.1
+    },
+    "drivers": [
+      "Rising pediatric asthma diagnosis",
+      "Urban pollution growth",
+      "Strong generic penetration"
+    ],
+    "barriers": [
+      "Low adoption of advanced inhalation devices",
+      "Affordability variations across states"
+    ],
+    "rx_volume_mn": 154.3,
+    "unmet_need_score": 7.4,
+    "innovation_opportunities": [
+      "Pediatric-friendly inhalers",
+      "Fixed-dose steroid combinations with fewer side effects",
+      "Breath-actuated device variants"
+    ]
+  },
+
+  "respiratory_copd_india": {
+    "therapy_area": "Respiratory - COPD",
+    "country": "India",
+    "historical_market_size_usd_mn": {
+      "2019": 510,
+      "2020": 545,
+      "2021": 592,
+      "2022": 640,
+      "2023": 710,
+      "2024": 760
+    },
+    "forecast_market_size_usd_mn": {
+      "2025": 845,
+      "2026": 930,
+      "2027": 1040,
+      "2028": 1155
+    },
+    "cagr_percent_2024_2028": 10.9,
+    "competitor_count": 35,
+    "brand_leaders": [
+      { "brand": "Tiova", "company": "Cipla", "market_share_percent": 31 },
+      { "brand": "Duolin", "company": "Cipla", "market_share_percent": 18 },
+      { "brand": "Spiriva", "company": "Boehringer Ingelheim", "market_share_percent": 11 }
+    ],
+    "epi_data": {
+      "prevalence_mn": 18,
+      "incidence_mn": 2.7,
+      "smoker_percent": 47,
+      "rural_burden_percent": 58,
+      "mortality_rate_per_100k": 12.4
+    },
+    "drivers": [
+      "High smoking rates",
+      "Ageing population",
+      "Rising diagnosis rates"
+    ],
+    "barriers": [
+      "Low spirometry penetration",
+      "Awareness gaps in rural regions"
+    ],
+    "rx_volume_mn": 98.6,
+    "unmet_need_score": 8.1,
+    "innovation_opportunities": [
+      "Long-acting nebulized formulations",
+      "Once-daily triple therapy FDCs",
+      "Digital inhaler adherence tools"
+    ]
+  },
+
+  "diabetes_type2_india": {
+    "therapy_area": "Diabetes Type 2",
+    "country": "India",
+    "historical_market_size_usd_bn": {
+      "2019": 3.4,
+      "2020": 3.9,
+      "2021": 4.2,
+      "2022": 4.9,
+      "2023": 5.5,
+      "2024": 5.9
+    },
+    "forecast_market_size_usd_bn": {
+      "2025": 6.7,
+      "2026": 7.8,
+      "2027": 9.2,
+      "2028": 10.6
+    },
+    "cagr_percent_2024_2028": 15.6,
+    "competitor_count": 65,
+    "epi_data": {
+      "prevalence_mn": 78,
+      "undiagnosed_percent": 42,
+      "obesity_association_percent": 61
+    },
+    "brand_leaders": [
+      { "brand": "Janumet", "company": "MSD", "market_share_percent": 12 },
+      { "brand": "Glyxambi", "company": "Boehringer", "market_share_percent": 8 }
+    ],
+    "rx_volume_mn": 310,
+    "unmet_need_score": 7.9,
+    "innovation_opportunities": [
+      "Low-cost GLP-1 analogues",
+      "Once-weekly oral formulations",
+      "Affordable cardioprotective FDCs"
+    ]
+  },
+
+  "cv_heart_failure_global": {
+    "therapy_area": "Heart Failure",
+    "country": "Global",
+    "historical_market_size_usd_bn": {
+      "2019": 12.1,
+      "2020": 13.3,
+      "2021": 15.2,
+      "2022": 16.8,
+      "2023": 18.4,
+      "2024": 20.1
+    },
+    "forecast_market_size_usd_bn": {
+      "2025": 23.2,
+      "2026": 26.7,
+      "2027": 31.1,
+      "2028": 36.8
+    },
+    "cagr_percent_2024_2028": 16.2,
+    "competitor_count": 28,
+    "brand_leaders": [
+      { "brand": "Entresto", "company": "Novartis", "market_share_percent": 41 },
+      { "brand": "Farxiga", "company": "AstraZeneca", "market_share_percent": 19 }
+    ],
+    "epi_data": {
+      "prevalence_mn": 64,
+      "annual_incidence_mn": 4.3,
+      "mortality_5yr_percent": 50
+    },
+    "drivers": [
+      "SGLT-2 adoption",
+      "Increased HF diagnosis",
+      "New guideline updates"
+    ],
+    "barriers": [
+      "Cost barriers in emerging markets",
+      "Complex titration regimens"
+    ],
+    "unmet_need_score": 8.5,
+    "innovation_opportunities": [
+      "Once-daily FDC for HF",
+      "Simplified titration solutions"
+    ]
+  },
+
+  "infectious_diseases_latam": {
+    "therapy_area": "Infectious Diseases",
+    "country": "LATAM",
+    "historical_market_size_usd_bn": {
+      "2019": 4.1,
+      "2020": 4.4,
+      "2021": 4.7,
+      "2022": 5.1,
+      "2023": 5.9,
+      "2024": 6.5
+    },
+    "forecast_market_size_usd_bn": {
+      "2025": 7.4,
+      "2026": 8.8,
+      "2027": 10.5,
+      "2028": 12.1
+    },
+    "cagr_percent_2024_2028": 16.4,
+    "infectious_hotspots": [
+      "Dengue",
+      "TB",
+      "Hepatitis B",
+      "Community-acquired pneumonia"
+    ],
+    "competitor_density": "Low",
+    "multinational_presence_low": true,
+    "unmet_need_score": 9.2
+  }
+}
