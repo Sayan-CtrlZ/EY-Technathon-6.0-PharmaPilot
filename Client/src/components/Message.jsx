@@ -1014,6 +1014,38 @@ const Message = ({ message, onRegenerate, isLoading = false }) => {
   const remarkPlugins = useMemo(() => [remarkGfm], [])
 
   const markdownComponents = useMemo(() => ({
+    h1: ({ node, ...props }) => (
+      <h1 {...props} className="text-2xl font-bold text-gray-900 dark:text-white mt-6 mb-4" />
+    ),
+    h2: ({ node, ...props }) => (
+      <h2 {...props} className="text-xl font-bold text-gray-800 dark:text-gray-100 mt-5 mb-3" />
+    ),
+    h3: ({ node, ...props }) => (
+      <h3 {...props} className="text-lg font-semibold text-gray-800 dark:text-gray-200 mt-4 mb-2" />
+    ),
+    ul: ({ node, ...props }) => (
+      <ul {...props} className="list-disc list-outside ml-6 my-3 space-y-1 text-gray-700 dark:text-gray-300" />
+    ),
+    ol: ({ node, ...props }) => (
+      <ol {...props} className="list-decimal list-outside ml-6 my-3 space-y-1 text-gray-700 dark:text-gray-300" />
+    ),
+    li: ({ node, ...props }) => (
+      <li {...props} className="loading-relaxed" />
+    ),
+    p: ({ node, ...props }) => (
+      <p {...props} className="mb-3 leading-relaxed text-gray-700 dark:text-gray-300" />
+    ),
+    strong: ({ node, ...props }) => (
+      <strong {...props} className="font-bold text-gray-900 dark:text-gray-100" />
+    ),
+    blockquote: ({ node, ...props }) => (
+      <blockquote {...props} className="border-l-4 border-green-500 pl-4 italic text-gray-600 dark:text-gray-400 my-4" />
+    ),
+    code: ({ node, inline, ...props }) => (
+      inline
+        ? <code {...props} className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-pink-600 dark:text-pink-400" />
+        : <code {...props} className="block bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono overflow-x-auto text-gray-800 dark:text-gray-200 my-4" />
+    ),
     a: ({ node, ...props }) => (
       <a
         {...props}
