@@ -2,10 +2,9 @@
 
 > **AI-Powered Pharmaceutical Research Platform** - Transforming drug discovery with intelligent insights
 
-[![Falsk](https://img.shields.io/badge/FastAPI-0.100-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Flask](https://img.shields.io/badge/Flask-3.1-000000?style=flat&logo=flask)](https://flask.palletsprojects.com/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat&logo=react)](https://react.dev/)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=flat&logo=python)](https://www.python.org/)
-[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite)](https://www.sqlite.org/)
 
 ---
 
@@ -31,8 +30,8 @@ PharmaPilot is an intelligent research assistant designed for pharmaceutical pro
 ## Tech Stack
 
 ### Backend
-- **Framework**: Flask 2.2.5
-- **AI/ML**: CrewAI, LangChain, OpenAI GPT-4
+- **Framework**: Flask 3.1+
+- **AI/ML**: CrewAI, LangChain, Google Gemini
 - **Authentication**: JWT (PyJWT 2.8.0)
 - **PDF Generation**: ReportLab 4.0.0
 - **Visualization**: Matplotlib 3.8.0
@@ -106,9 +105,9 @@ npm install
 Create a `.env` file in the `Server` directory:
 
 ```env
-# OpenAI Configuration
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_MODEL_NAME=gpt-4o
+# Google Gemini Configuration
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.0-flash-exp
 
 # Flask Configuration
 FLASK_DEBUG=True
@@ -249,7 +248,7 @@ This project was developed for EY Techathon 6.0. For contributions or inquiries,
 
 ## License
 
-Copyright 2025 PharmaPilot Team. All rights reserved.
+Copyright 2025 MindOrbit Team. All rights reserved.
 
 ---
 
